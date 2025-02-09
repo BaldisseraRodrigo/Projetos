@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "global": "^4.4.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
