@@ -82,7 +82,7 @@ function menuCalculadora() {
     console.log('=================================')
     console.log('')
 }
-
+//A OPÇÃO 6 É A CALCULADORA DE COMBUSTÍVEL, QUE É UM APP DENTRO DO PRINTERHELPER
 //7-CHECK-LISTS
 function menuCheck() {
     console.log('')

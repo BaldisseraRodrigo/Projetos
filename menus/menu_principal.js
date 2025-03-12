@@ -2,6 +2,8 @@
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null
+const menu = ['Manutenção de Hardware','Ajustes/Modo Manutenção','Código de Erro', 'Firmwares',
+    'Calculadora de Vida Útil','Calculadora de Combustível','Check-lists','Toners/Cartuchos','Equipamentos']
 
 //MENU PRINCIPAL
 function menuPrincipal() {
@@ -21,13 +23,15 @@ function menuPrincipal() {
     console.log('|[S] Sair                       |')
     console.log('=================================')
     console.log('')
-    if (opcao==0) {
-        console.log(mntHard[0])
-    } else {
-        for (conta in mntHard) {
-        if ([conta]==opcao) {
-            mntHard[conta]()
-            }
+    while(opcao!='S') {
+        opcao = prompt('Digite a opção: ')
+        if (opcao>=1 && opcao<=9) {
+            console.log(menu[opcao-1])
+            opcao = 'S'
+        } else if (opcao=='S') {
+            console.log('Saindo...')
+        } else {
+            console.log('ERRO! Opção invalida!')
         }
     }
 }
