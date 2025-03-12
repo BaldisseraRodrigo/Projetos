@@ -9,5 +9,3 @@ const p2040 = {
         e0500,e0510,e0530,e0540]
     
 }
-
-const e0100 = ['1.Reinicie a impressora: Desligue a impressora, aguarde alguns segundos e ligue-a novamente. Isso pode resolver erros temporários de memória.']

@@ -31,21 +31,6 @@ function menuPrincipal() {
         }
     }
 }
-const menu = ['Saindo...',manutencaoHardware,'Ajustes/Modo Manutenção','Código de Erro', 'Firmwares',
-    'Calculadora de Vida Útil','Calculadora de Combustível','Check-lists','Toners/Cartuchos','Equipamentos'
-]
-
-
-
-
-
-
-
-
-
-
-
-
 
 menuPrincipal()
 
