@@ -66,23 +66,6 @@ function menuFirmware() {
     console.log('')
 }
 
-//5-CALCULADORA DE VIDA ÚTIL
-function menuCalculadora() {
-    console.log('')
-    console.log('=================================')
-    console.log('|    CALCULADORA DE VIDA ÚTIL   |')
-    console.log('=================================')
-    console.log('|[1] KYOCERA                    |')
-    console.log('|[2] RICOH                      |')
-    console.log('|[3] LEXMARK                    |')
-    console.log('|[4] CANON                      |')
-    console.log('=================================')
-    console.log('|[V] Voltar                     |')
-    console.log('|[S] Sair                       |')
-    console.log('=================================')
-    console.log('')
-}
-//A OPÇÃO 6 É A CALCULADORA DE COMBUSTÍVEL, QUE É UM APP DENTRO DO PRINTERHELPER
 //7-CHECK-LISTS
 function menuCheck() {
     console.log('')

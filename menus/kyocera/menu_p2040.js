@@ -1,4 +1,4 @@
-//MANUTENÇÃO DE HARDWARE - KYOCERA
+//MANUTENÇÃO DE HARDWARE - P2040
 function manutencaoP2040() {
     console.log('')
     console.log('=================================')
@@ -31,6 +31,32 @@ function manutencaoP2040() {
     console.log('|[17] LADO INFERIOR             |')
     console.log('|-------------------------------|')
     console.log('|[18] EQUIPAMENTO NÃO LIGA      |')
+    console.log('=================================')
+    console.log('|[V] Voltar                     |')
+    console.log('|[S] Sair                       |')
+    console.log('=================================')
+    console.log('')
+}
+
+//CONFIGURAÇÕES & AJUSTES - P2040
+function ajustesP2040() {
+    console.log('')
+    console.log('=================================')
+    console.log('| CONFIGURAÇÕES & AJUSTES P2040 |')
+    console.log('=================================')
+    console.log('|[1] PREPARAÇÃO                 |')
+    console.log('|[2] REDE                       |')
+    console.log('|[3] PAPEL                      |')
+    console.log('|[4] MODO MANUTENÇÃO            |')
+    console.log('|[5] CONFIGURAÇÕES E SERVIÇOS   |')
+    console.log('|-------------------------------|')
+    console.log('|        CÓDIGO DE ERROS        |')
+    console.log('|-------------------------------|')
+    console.log('|[6] 01xx                       |')
+    console.log('|[7] 05xx                       |')
+    console.log('|[8] 08xx                       |')
+    console.log('|[4] MODO MANUTENÇÃO            |')
+    console.log('|[5] CONFIGURAÇÕES E SERVIÇOS   |')
     console.log('=================================')
     console.log('|[V] Voltar                     |')
     console.log('|[S] Sair                       |')

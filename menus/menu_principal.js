@@ -27,7 +27,7 @@ function menuPrincipal() {
         opcao = prompt('Digite a opção: ')
         if (opcao>=1 && opcao<=9) {
             console.log(menu[opcao-1])
-            opcao = 'S'
+            console.log('')
         } else if (opcao=='S') {
             console.log('Saindo...')
         } else {

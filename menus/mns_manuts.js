@@ -1,5 +1,5 @@
 //1-MANUTENÇÃO DE KYOCERA
-function manutencaoKyocera() {
+function menuKyocera() {
     console.log('')
     console.log('=================================')
     console.log('|     MANUTENÇÃO DE KYOCERA     |')
@@ -27,7 +27,7 @@ function manutencaoKyocera() {
 }
 
 //2-MANUTENÇÃO DE RICOH
-function manutencaoRicoh() {
+function menuRicoh() {
     console.log('')
     console.log('=================================')
     console.log('|     MANUTENÇÃO DE RICOH       |')
@@ -41,7 +41,7 @@ function manutencaoRicoh() {
 }
 
 //3-MANUTENÇÃO DE LEXMARK
-function manutencaoLexmark() {
+function menuLexmark() {
     console.log('')
     console.log('=================================')
     console.log('|    MANUTENÇÃO DE LEXMARK      |')
@@ -54,7 +54,7 @@ function manutencaoLexmark() {
 }
 
 //4-MANUTENÇÃO DE CANON
-function manutencaoCanon() {
+function menuCanon() {
     console.log('')
     console.log('=================================')
     console.log('|      MANUTENÇÃO DE CANON      |')
