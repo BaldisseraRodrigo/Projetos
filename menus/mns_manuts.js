@@ -1,67 +1,48 @@
+const mnMntP2040 = require("./kyocera/menu_p2040")
+const prompt = require("prompt-sync")()
+console.clear()
+let opcaoM = null
+const menuM = [mnMntP2040,'P3050','P3155']
 //1-MANUTENÇÃO DE KYOCERA
-function menuKyocera() {
+const mnMntKyocera = function mMk() {
+    console.clear()
     console.log('')
     console.log('=================================')
-    console.log('|     MANUTENÇÃO DE KYOCERA     |')
+    console.log('|MANUTS. E CONFIGURAÇÕES KYOCERA|')
     console.log('=================================')
     console.log('|             ECOSYS            |')
     console.log('|-------------------------------|')
-    console.log('|[1] P2040             [6] M2040|')
-    console.log('|[2] P3050             [7] M3550|')
-    console.log('|[3] P3155             [8] M3655|')
-    console.log('|[4] M2640             [9] M3040|')
-    console.log('|[5] M5526            [10] M6626|')
+    console.log('|[1] P2040             [!] M2040|')
+    console.log('|[2] P3050             [!] M3550|')
+    console.log('|[3] P3155             [!] M3655|')
+    console.log('|[!] M2640             [!] M3040|')
+    console.log('|[!] M5526             [!] M6626|')
     console.log('|-------------------------------|')
     console.log('|            TASKALFA           |')
     console.log('|-------------------------------|')
-    console.log('|[11] 306CI          [17] 2552CI|')
-    console.log('|[12] 307CI          [18] 2553CI|')
-    console.log('|[13] 308CI          [19] 4052CI|')
-    console.log('|[14] 356CI          [20] 5052CI|')
-    console.log('|[15] 358CI          [21] 6052CI|')
-    console.log('|[16] 406CI          [22] 7052CI|')
+    console.log('|[!] 306CI            [!] 2552CI|')
+    console.log('|[!] 307CI            [!] 2553CI|')
+    console.log('|[!] 308CI            [!] 4052CI|')
+    console.log('|[!] 356CI            [!] 5052CI|')
+    console.log('|[!] 358CI            [!] 6052CI|')
+    console.log('|[!] 406CI            [!] 7052CI|')
     console.log('|-------------------------------|')
     console.log('|[S] Sair             [V] Voltar|')
     console.log('=================================')
     console.log('')
+    while(opcaoM!='S') {
+        opcaoM = prompt('Digite a opção: ')
+        if (opcaoM>=1 && opcaoM<4) {
+            menuM[opcaoM-1]()
+        } else if (opcaoM=='S') {
+            console.log('Saindo...')
+            process.exit(0)
+        } else if (opcaoM=='V') {
+            return
+        } else {
+            console.log('ERRO! Opção invalida!')
+        }
+    }
 }
 
-//2-MANUTENÇÃO DE RICOH
-function menuRicoh() {
-    console.log('')
-    console.log('=================================')
-    console.log('|     MANUTENÇÃO DE RICOH       |')
-    console.log('=================================')
-    console.log('|[1] P311             [3] SF3710|')
-    console.log('|[2] SP3710           [4] M320F |')
-    console.log('|-------------------------------|')
-    console.log('|[S] Sair             [V] Voltar|')
-    console.log('=================================')
-    console.log('')
-}
-
-//3-MANUTENÇÃO DE LEXMARK
-function menuLexmark() {
-    console.log('')
-    console.log('=================================')
-    console.log('|    MANUTENÇÃO DE LEXMARK      |')
-    console.log('=================================')
-    console.log('|[1] MX722ADHE                  |')
-    console.log('|-------------------------------|')
-    console.log('|[S] Sair             [V] Voltar|')
-    console.log('=================================')
-    console.log('')
-}
-
-//4-MANUTENÇÃO DE CANON
-function menuCanon() {
-    console.log('')
-    console.log('=================================')
-    console.log('|      MANUTENÇÃO DE CANON      |')
-    console.log('=================================')
-    console.log('|[1] TM-300          [2] TM-350 |')
-    console.log('|-------------------------------|')
-    console.log('|[S] Sair             [V] Voltar|')
-    console.log('=================================')
-    console.log('')
-}
+module.exports = mnMntKyocera
