@@ -1,12 +1,13 @@
 //PRINTER HELPER
-const menuHardware = require("./submenus")
+const manutConfig = require("./submenus")
 const prompt = require("prompt-sync")()
 console.clear()
-let opcaoP = null
-const menuP = [menuHardware,'Firmwares','Calculadora de Vida Útil','Calculadora de Combustível','Check-lists','Toners/Cartuchos','Equipamentos']
+let opcao = null
+const listaPrincipal = [manutConfig,'Firmwares','Calculadora de Vida Útil','Calculadora de Combustível','Check-lists','Toners/Cartuchos','Equipamentos']
 
 //MENU PRINCIPAL
-const mnPr = function mP() {
+const menuPrincipal = function mP() {
+    console.clear()
     console.log('')
     console.log('=================================')
     console.log('|  P R I N T E R   H E L P E R  |')
@@ -23,13 +24,12 @@ const mnPr = function mP() {
     console.log('')
 }
 
-while(opcaoP!='S') {
-    console.clear()
-    mnPr()
-    opcaoP = prompt('Digite a opção: ')
-    if (opcaoP>=1 && opcaoP<=9) {
-        menuP[opcaoP-1]()
-    } else if (opcaoP=='S') {
+while(opcao!='S') {
+    menuPrincipal()
+    opcao = prompt('Digite a opção: ')
+    if (opcao>=1 && opcao<=9) {
+        listaPrincipal[opcao-1]()
+    } else if (opcao=='S') {
         console.log('Saindo...')
     } else {
         console.log('ERRO! Opção invalida!')

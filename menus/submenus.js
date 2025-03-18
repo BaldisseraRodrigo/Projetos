@@ -1,11 +1,11 @@
-const mnMntKyocera = require("./mns_manuts")
+const manutKyocera = require("./menu_manuts")
 const prompt = require("prompt-sync")()
 console.clear()
-let opcaoS = null
-const menuS = [mnMntKyocera,'RICOH','LEXMARK','CANON']
-//1-MANUTENÇÃO DE HARDWARE
-const mntHard = function mH() {
-    while(opcaoS!='S') {
+let opcao = null
+const listaManut = [manutKyocera,'RICOH','LEXMARK','CANON']
+//1-MANUTENÇÕES & CONFIGURAÇÕES
+const manutConfig = function mC() {
+    while(opcao!='S') {
         console.clear()
         console.log('')
         console.log('=================================')
@@ -20,13 +20,13 @@ const mntHard = function mH() {
         console.log('|[S] Sair                       |')
         console.log('=================================')
         console.log('')
-        opcaoS = prompt('Digite a opção: ')
-        if (opcaoS>=1 && opcaoS<5) {
-            menuS[opcaoS-1]()
-        } else if (opcaoS=='S') {
+        opcao = prompt('Digite a opção: ')
+        if (opcao>=1 && opcao<5) {
+            listaManut[opcao-1]()
+        } else if (opcao=='S') {
             console.log('Saindo...')
             process.exit(0)
-        } else if (opcaoS=='V') {
+        } else if (opcao=='V') {
             return
         } else {
             console.log('ERRO! Opção invalida!')
@@ -102,4 +102,4 @@ function menuEquipamentos() {
     console.log('')
 }
 
-module.exports = mntHard
+module.exports = manutConfig
