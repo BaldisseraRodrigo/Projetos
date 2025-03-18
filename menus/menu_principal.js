@@ -1,9 +1,9 @@
 //PRINTER HELPER
-const manutConfig = require("./submenus")
+const submenu = require("./submenus")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null
-const listaPrincipal = [manutConfig,'Firmwares','Calculadora de Vida Útil','Calculadora de Combustível','Check-lists','Toners/Cartuchos','Equipamentos']
+const listaPrincipal = [submenu[0],submenu[1],'Calculadora de Vida Útil','Calculadora de Combustível','Check-lists','Toners/Cartuchos','Equipamentos']
 
 //MENU PRINCIPAL
 const menuPrincipal = function mP() {
@@ -12,14 +12,15 @@ const menuPrincipal = function mP() {
     console.log('=================================')
     console.log('|  P R I N T E R   H E L P E R  |')
     console.log('=================================')
-    console.log('|[1] Manutenções e Configurações|')
-    console.log('|[2] Firmwares                  |')
-    console.log('|[3] Calculadora de Vida Útil   |')
-    console.log('|[4] Calculadora de Combustível |')
-    console.log('|[5] Check-lists                |')
-    console.log('|[6] Toners & Cartuchos         |')
-    console.log('|[7] Equipamentos               |')
-    console.log('|[S] Sair                       |')
+    console.log('|[1] MANUTENÇÕES E CONFIGURAÇÕES|')
+    console.log('|[2] FIRMWARES                  |')
+    console.log('|[3] CALCULADORA DE VIDA ÚTIL   |')
+    console.log('|[4] CALCULADORA DE COMBUSTÍVEL |')
+    console.log('|[5] CHECK-LISTS                |')
+    console.log('|[6] TONERS & CARTUCHOS         |')
+    console.log('|[7] EQUIPAMENTOS               |')
+    console.log('=================================')
+    console.log('|[S] SAIR                       |')
     console.log('=================================')
     console.log('')
 }

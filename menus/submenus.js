@@ -21,7 +21,7 @@ const manutConfig = function mC() {
         console.log('=================================')
         console.log('')
         opcao = prompt('Digite a opção: ')
-        if (opcao>=1 && opcao<5) {
+        if (opcao>0 && opcao<5) {
             listaManut[opcao-1]()
         } else if (opcao=='S') {
             console.log('Saindo...')
@@ -35,20 +35,34 @@ const manutConfig = function mC() {
 }
 
 //4-FIRMWARES
-function menuFirmware() {
-    console.log('')
-    console.log('=================================')
-    console.log('|           FIRMWARES           |')
-    console.log('=================================')
-    console.log('|[1] KYOCERA                    |')
-    console.log('|[2] RICOH                      |')
-    console.log('|[3] LEXMARK                    |')
-    console.log('|[4] CANON                      |')
-    console.log('=================================')
-    console.log('|[V] Voltar                     |')
-    console.log('|[S] Sair                       |')
-    console.log('=================================')
-    console.log('')
+const menuFirmware = function mF() {
+    while(opcao!='S') {
+        console.clear()
+        console.log('')
+        console.log('=================================')
+        console.log('|           FIRMWARES           |')
+        console.log('=================================')
+        console.log('|[1] KYOCERA                    |')
+        console.log('|[2] RICOH                      |')
+        console.log('|[3] LEXMARK                    |')
+        console.log('|[4] CANON                      |')
+        console.log('=================================')
+        console.log('|[V] Voltar                     |')
+        console.log('|[S] Sair                       |')
+        console.log('=================================')
+        console.log('')
+        opcao = prompt('Digite a opção: ')
+        if (opcao>0 && opcao<5) {
+            listaManut[opcao-1]()
+        } else if (opcao=='S') {
+            console.log('Saindo...')
+            process.exit(0)
+        } else if (opcao=='V') {
+            return
+        } else {
+            console.log('ERRO! Opção invalida!')
+        }
+    }
 }
 
 //7-CHECK-LISTS
@@ -102,4 +116,5 @@ function menuEquipamentos() {
     console.log('')
 }
 
-module.exports = manutConfig
+const submenu = [manutConfig,menuFirmware]
+module.exports = submenu

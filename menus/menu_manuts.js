@@ -32,7 +32,7 @@ const manutKyocera = function mK() {
         console.log('=================================')
         console.log('')
         opcao = prompt('Digite a opção: ')
-        if (opcao>=1 && opcao<4) {
+        if (opcao>0 && opcao<4) {
             listaManutKyocera[opcao-1]()
         } else if (opcao=='S') {
             console.log('Saindo...')
