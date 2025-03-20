@@ -1,10 +1,12 @@
 const manutKyocera = require("./menu_manuts")
+const tabelasFirmware = require("./tabela_firmware")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null
-const listaManut = [manutKyocera,'RICOH','LEXMARK','CANON']
+
 //1-MANUTENÇÕES & CONFIGURAÇÕES
 const manutConfig = function mC() {
+    const listaManut = [manutKyocera,'RICOH','LEXMARK','CANON']
     while(opcao!='S') {
         console.clear()
         console.log('')
@@ -36,6 +38,7 @@ const manutConfig = function mC() {
 
 //4-FIRMWARES
 const menuFirmware = function mF() {
+    const listaFirmware = [tabelasFirmware[0],tabelasFirmware[1]]
     while(opcao!='S') {
         console.clear()
         console.log('')
@@ -43,17 +46,17 @@ const menuFirmware = function mF() {
         console.log('|           FIRMWARES           |')
         console.log('=================================')
         console.log('|[1] KYOCERA                    |')
-        console.log('|[2] RICOH                      |')
-        console.log('|[3] LEXMARK                    |')
-        console.log('|[4] CANON                      |')
+        console.log('|[2] RICOH, LEXMARK & CANON     |')
         console.log('=================================')
         console.log('|[V] Voltar                     |')
         console.log('|[S] Sair                       |')
         console.log('=================================')
         console.log('')
         opcao = prompt('Digite a opção: ')
-        if (opcao>0 && opcao<5) {
-            listaManut[opcao-1]()
+        if (opcao==1) {
+            listaFirmware[0]()
+        } else if (opcao==2) {
+            listaFirmware[1]()
         } else if (opcao=='S') {
             console.log('Saindo...')
             process.exit(0)
@@ -66,20 +69,35 @@ const menuFirmware = function mF() {
 }
 
 //7-CHECK-LISTS
-function menuCheck() {
-    console.log('')
-    console.log('=================================')
-    console.log('|          CHECK-LISTS          |')
-    console.log('=================================')
-    console.log('|[1] INSTALAÇÃO                 |')
-    console.log('|[2] RETIRADA                   |')
-    console.log('|[3] PREPARAÇÃO                 |')
-    console.log('|[4] DESMANCHE                  |')
-    console.log('=================================')
-    console.log('|[V] Voltar                     |')
-    console.log('|[S] Sair                       |')
-    console.log('=================================')
-    console.log('')
+const menuCheckList = function mCl() {
+    const listaCheck = ['INSTALAÇÃO','RETIRADA','PREPARAÇÃO','DESMANCHE']
+    while(opcao!='S') {
+        console.clear()
+        console.log('')
+        console.log('=================================')
+        console.log('|          CHECK-LISTS          |')
+        console.log('=================================')
+        console.log('|[1] INSTALAÇÃO                 |')
+        console.log('|[2] RETIRADA                   |')
+        console.log('|[3] PREPARAÇÃO                 |')
+        console.log('|[4] DESMANCHE                  |')
+        console.log('=================================')
+        console.log('|[V] Voltar                     |')
+        console.log('|[S] Sair                       |')
+        console.log('=================================')
+        console.log('')
+        opcao = prompt('Digite a opção: ')
+        if (opcao>0 && opcao<5) {
+            listaCheck[opcao-1]
+        } else if (opcao=='S') {
+            console.log('Saindo...')
+            process.exit(0)
+        } else if (opcao=='V') {
+            return
+        } else {
+            console.log('ERRO! Opção invalida!')
+        }
+    }
 }
 
 //8-TONERS & CARTUCHOS
@@ -116,5 +134,5 @@ function menuEquipamentos() {
     console.log('')
 }
 
-const submenu = [manutConfig,menuFirmware]
+const submenu = [manutConfig,menuFirmware,menuCheckList]
 module.exports = submenu

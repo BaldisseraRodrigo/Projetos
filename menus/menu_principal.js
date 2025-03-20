@@ -1,9 +1,10 @@
 //PRINTER HELPER
 const submenu = require("./submenus")
+const menuCalculadora = require("./calc_util")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null
-const listaPrincipal = [submenu[0],submenu[1],'Calculadora de Vida Útil','Calculadora de Combustível','Check-lists','Toners/Cartuchos','Equipamentos']
+const listaPrincipal = [submenu[0],submenu[1],menuCalculadora,submenu[2],'Calculadora de Combustível','Toners/Cartuchos','Equipamentos']
 
 //MENU PRINCIPAL
 const menuPrincipal = function mP() {
