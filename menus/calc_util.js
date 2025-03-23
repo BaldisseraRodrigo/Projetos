@@ -23,7 +23,7 @@ function calcUtil(a) {
     console.log('')
 }
 
-const menuCalculadora = function mC() {
+const menuCalcVidaUtil = function mCvU() {
     console.log('')
     console.log('=================================')
     console.log('|   CALCULADORA DE VIDA ÚTIL    |')
@@ -51,7 +51,7 @@ const menuCalculadora = function mC() {
     }
 }
 
-module.exports = menuCalculadora
+module.exports = menuCalcVidaUtil
 
 
 

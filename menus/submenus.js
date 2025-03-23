@@ -1,5 +1,6 @@
 const manutKyocera = require("./menu_manuts")
 const tabelasFirmware = require("./tabela_firmware")
+const checklist = require("./checklists")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null
@@ -70,7 +71,7 @@ const menuFirmware = function mF() {
 
 //7-CHECK-LISTS
 const menuCheckList = function mCl() {
-    const listaCheck = ['INSTALAÇÃO','RETIRADA','PREPARAÇÃO','DESMANCHE']
+    const listaCheck = [checklist[0],checklist[1],checklist[2],checklist[3]]
     while(opcao!='S') {
         console.clear()
         console.log('')
@@ -88,7 +89,7 @@ const menuCheckList = function mCl() {
         console.log('')
         opcao = prompt('Digite a opção: ')
         if (opcao>0 && opcao<5) {
-            listaCheck[opcao-1]
+            listaCheck[opcao-1]()
         } else if (opcao=='S') {
             console.log('Saindo...')
             process.exit(0)

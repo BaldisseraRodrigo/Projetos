@@ -1,10 +1,10 @@
 //PRINTER HELPER
 const submenu = require("./submenus")
-const menuCalculadora = require("./calc_util")
+const menuCalcVidaUtil = require("./calc_util")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null
-const listaPrincipal = [submenu[0],submenu[1],menuCalculadora,submenu[2],'Calculadora de Combustível','Toners/Cartuchos','Equipamentos']
+const listaPrincipal = [submenu[0],submenu[1],submenu[2],'Toners/Cartuchos','Equipamentos',menuCalcVidaUtil,'Calculadora de Combustível']
 
 //MENU PRINCIPAL
 const menuPrincipal = function mP() {
@@ -15,11 +15,11 @@ const menuPrincipal = function mP() {
     console.log('=================================')
     console.log('|[1] MANUTENÇÕES E CONFIGURAÇÕES|')
     console.log('|[2] FIRMWARES                  |')
-    console.log('|[3] CALCULADORA DE VIDA ÚTIL   |')
-    console.log('|[4] CALCULADORA DE COMBUSTÍVEL |')
-    console.log('|[5] CHECK-LISTS                |')
-    console.log('|[6] TONERS & CARTUCHOS         |')
-    console.log('|[7] EQUIPAMENTOS               |')
+    console.log('|[3] CHECK-LISTS                |')
+    console.log('|[4] TONERS & CARTUCHOS         |')
+    console.log('|[5] EQUIPAMENTOS               |')
+    console.log('|[6] CALCULADORA DE VIDA ÚTIL   |')
+    console.log('|[7] CALCULADORA DE COMBUSTÍVEL |')
     console.log('=================================')
     console.log('|[S] SAIR                       |')
     console.log('=================================')
