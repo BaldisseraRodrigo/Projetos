@@ -7,7 +7,7 @@ let opcao = null
 
 //1-MANUTENÇÕES & CONFIGURAÇÕES
 const manutConfig = function mC() {
-    const listaManut = [manutKyocera,'RICOH','LEXMARK','CANON']
+    const listaManut = [manutKyocera]
     while(opcao!='S') {
         console.clear()
         console.log('')
@@ -15,17 +15,14 @@ const manutConfig = function mC() {
         console.log('|   MANUTENÇÕES & CONFIGURAÇÃO  |')
         console.log('=================================')
         console.log('|[1] KYOCERA                    |')
-        console.log('|[2] RICOH                      |')
-        console.log('|[3] LEXMARK                    |')
-        console.log('|[4] CANON                      |')
         console.log('=================================')
         console.log('|[V] Voltar                     |')
         console.log('|[S] Sair                       |')
         console.log('=================================')
         console.log('')
         opcao = prompt('Digite a opção: ')
-        if (opcao>0 && opcao<5) {
-            listaManut[opcao-1]()
+        if (opcao==1) {
+            listaManut[0]()
         } else if (opcao=='S') {
             console.log('Saindo...')
             process.exit(0)
@@ -37,7 +34,7 @@ const manutConfig = function mC() {
     }
 }
 
-//4-FIRMWARES
+//2-FIRMWARES
 const menuFirmware = function mF() {
     const listaFirmware = [tabelasFirmware[0],tabelasFirmware[1]]
     while(opcao!='S') {
@@ -69,26 +66,27 @@ const menuFirmware = function mF() {
     }
 }
 
-//7-CHECK-LISTS
+//3-CHECK-LISTS
 const menuCheckList = function mCl() {
-    const listaCheck = [checklist[0],checklist[1],checklist[2],checklist[3]]
+    const listaCheck = [checklist[0],checklist[1],checklist[2],checklist[3],checklist[4]]
     while(opcao!='S') {
         console.clear()
         console.log('')
         console.log('=================================')
         console.log('|          CHECK-LISTS          |')
         console.log('=================================')
-        console.log('|[1] INSTALAÇÃO                 |')
-        console.log('|[2] RETIRADA                   |')
-        console.log('|[3] PREPARAÇÃO                 |')
-        console.log('|[4] DESMANCHE                  |')
+        console.log('|[1] PREPARAÇÃO                 |')
+        console.log('|[2] INSTALAÇÃO                 |')
+        console.log('|[3] MANUTENÇÃO                 |')
+        console.log('|[4] RETIRADA                   |')
+        console.log('|[5] DESMANCHE                  |')
         console.log('=================================')
         console.log('|[V] Voltar                     |')
         console.log('|[S] Sair                       |')
         console.log('=================================')
         console.log('')
         opcao = prompt('Digite a opção: ')
-        if (opcao>0 && opcao<5) {
+        if (opcao>0 && opcao<6) {
             listaCheck[opcao-1]()
         } else if (opcao=='S') {
             console.log('Saindo...')
@@ -101,16 +99,14 @@ const menuCheckList = function mCl() {
     }
 }
 
-//8-TONERS & CARTUCHOS
+//4-TONERS & CARTUCHOS
 function menuToner() {
     console.log('')
     console.log('=================================')
     console.log('|       TONERS & CARTUCHOS      |')
     console.log('=================================')
     console.log('|[1] KYOCERA                    |')
-    console.log('|[2] RICOH                      |')
-    console.log('|[3] LEXMARK                    |')
-    console.log('|[4] CANON                      |')
+    console.log('|[2] RICOH, LEXMARK & CANON     |')
     console.log('=================================')
     console.log('|[V] Voltar                     |')
     console.log('|[S] Sair                       |')
@@ -118,7 +114,7 @@ function menuToner() {
     console.log('')
 }
 
-//9-EQUIPAMENTOS
+//5-EQUIPAMENTOS
 function menuEquipamentos() {
     console.log('')
     console.log('=================================')
