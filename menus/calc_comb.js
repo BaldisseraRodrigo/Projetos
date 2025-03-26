@@ -1,4 +1,8 @@
-function gasConta(){   
+const prompt = require("prompt-sync")()
+console.clear()
+let opcao = null
+
+const calcCombustivel = function cC(){   
     const cstStd = 10
     console.log('')
     console.log('----------COMPENSASÃO DE COMBUSTÍVEL----------')
@@ -25,3 +29,5 @@ function gasConta(){
     console.log('----------------------------------------------')
     console.log('')
 }
+
+module.exports = calcCombustivel

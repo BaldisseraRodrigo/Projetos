@@ -24,6 +24,7 @@ function calcUtil(a) {
 }
 
 const menuCalcVidaUtil = function mCvU() {
+    console.clear()
     console.log('')
     console.log('=================================')
     console.log('|   CALCULADORA DE VIDA ÚTIL    |')

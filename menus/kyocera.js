@@ -1,3 +1,5 @@
+const { capacidade } = require("./lexmark")
+
 const p2040 = {
     marca:'KYOCERA',
     modelo:'ECOSYS P2040dw',
@@ -5,6 +7,10 @@ const p2040 = {
     papel:'A4 & CARTA',
     capacidade:'250+100 folhas',
     cores:'Monocromática',
+    toner:{
+        modelo:'TK1175',
+        capacidade:'5.000 impressões'
+    },
     codigos:['e0100','e0120','e0130'],
     manutencao:['Marcas no papel','Obstrução de Papel','Ruído ao funcionar','Equipamento não liga'],
     configuracoes:['Preparação','Rede','Driver','Printwayy'],
@@ -25,6 +31,10 @@ const m2040 = {
     papel:'A4 & CARTA',
     capacidade:'250+100 folhas',
     cores:'Monocromática',
+    toner:{
+        modelo:'TK1175',
+        capacidade:'5.000 impressões'
+    },
     codigos:['e0100','e0120','e0130'],
     manutencao:['Marcas no papel','Obstrução de Papel','Ruído ao funcionar','Equipamento não liga'],
     configuracoes:['Preparação','Rede','Driver','Scanner','Printwayy'],
@@ -45,6 +55,10 @@ const m3040 = {
     papel:'A4 & CARTA',
     capacidade:'350+100 folhas',
     cores:'Monocromática',
+    toner:{
+        modelo:'TK3102',
+        capacidade:'5.000 impressões'
+    },
     codigos:['e0100','e0120','e0130'],
     manutencao:['Marcas no papel','Obstrução de Papel','Ruído ao funcionar','Equipamento não liga'],
     configuracoes:['Preparação','Rede','Driver','Scanner','Printwayy'],

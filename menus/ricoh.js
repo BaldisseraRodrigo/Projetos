@@ -1,3 +1,5 @@
+const { modelo, capacidade } = require("./lexmark")
+
 const p311 = {
     marca:'RICOH',
     modelo:'P311',
@@ -5,6 +7,10 @@ const p311 = {
     papel:'A4 & CARTA',
     capacidade:'250+100 folhas',
     cores:'Monocromática',
+    toner: {
+        modelo:'SP3710',
+        capacidade:'3.000 impressões'
+    },
     codigos:['SP536'],
     manutencao:['Marcas no papel','Obstrução de Papel','Ruído ao funcionar','Equipamento não liga'],
     configuracoes:['Preparação','Rede','Driver','Printwayy'],
@@ -25,6 +31,10 @@ const m320 = {
     papel:'A4 & CARTA',
     capacidade:'250+100 folhas',
     cores:'Monocromática',
+    toner: {
+        modelo:'SP3710',
+        capacidade:'3.000 impressões'
+    },
     codigos:['SF536'],
     manutencao:['Marcas no papel','Obstrução de Papel','Ruído ao funcionar','Equipamento não liga'],
     configuracoes:['Preparação','Rede','Driver','Scanner','Printwayy'],

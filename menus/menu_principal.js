@@ -1,10 +1,10 @@
 //PRINTER HELPER
-const submenu = require("./submenus")
+const submenus = require("./submenus")
 const menuCalcVidaUtil = require("./calc_util")
+const calcCombustivel = require("./calc_comb")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null
-const listaPrincipal = [submenu[0],submenu[1],submenu[2],'Toners/Cartuchos','Equipamentos',menuCalcVidaUtil,'Calculadora de Combustível']
 
 //MENU PRINCIPAL
 const menuPrincipal = function mP() {
@@ -29,8 +29,14 @@ const menuPrincipal = function mP() {
 while(opcao!='S') {
     menuPrincipal()
     opcao = prompt('Digite a opção: ')
-    if (opcao>=1 && opcao<=9) {
-        listaPrincipal[opcao-1]()
+    if (opcao>0 && opcao<8) {
+        if (opcao==6) {
+            menuCalcVidaUtil()
+        } else if (opcao==7) {
+            calcCombustivel()
+        } else {
+            submenus[opcao-1]()
+        }
     } else if (opcao=='S') {
         console.log('Saindo...')
     } else {

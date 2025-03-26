@@ -5,6 +5,10 @@ const mx722 = {
     papel:'A4 & CARTA',
     capacidade:'500+100 folhas',
     cores:'Monocromática',
+    toner: {
+        modelo:'58D4U00',
+        capacidade:'55.000 impressões'
+    },
     codigos:[''],
     manutencao:['Marcas no papel','Obstrução de Papel','Ruído ao funcionar','Equipamento não liga'],
     configuracoes:['Preparação','Rede','Driver','Scanner','Printwayy'],
