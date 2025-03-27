@@ -136,16 +136,14 @@ const menuEquipamentos = function mE() {
         console.log('|          EQUIPAMENTOS         |')
         console.log('=================================')
         console.log('|[1] KYOCERA                    |')
-        console.log('|[2] RICOH                      |')
-        console.log('|[3] LEXMARK                    |')
-        console.log('|[4] CANON                      |')
+        console.log('|[2] RICOH, LEXMARK & CANON     |')
         console.log('=================================')
         console.log('|[V] Voltar                     |')
         console.log('|[S] Sair                       |')
         console.log('=================================')
         console.log('')
         opcao = prompt('Digite a opção: ')
-        if (opcao>0 && opcao<5) {
+        if (opcao>0 && opcao<3) {
             tabelasEquipamentos[opcao-1]()
         } else if (opcao=='S') {
             console.log('Saindo...')

@@ -5,6 +5,9 @@ let opcao = null
 
 function calcUtil(a) {
     let precoPagina = 0.5
+    console.clear()
+    console.log('')
+    console.log('---- CÁLCULO DE VIDA ÚTIL DE EQUIPAMENTO ----')
     let paginas = parseInt(prompt('Quantidade de páginas: '))
     let qtdRevelador = parseInt(prompt('Unidades Reveladora substituídas: '))
     let qtdCilindro = parseInt(prompt('Unidades de Cilindro substituídas: '))
@@ -18,6 +21,8 @@ function calcUtil(a) {
     let custoTotal = lucroPagina - custoRevelador - custoCilindro - custoFusao - a.valores.preco
     a.valores.vidaUtil = 100 - (paginas / a.valores.vidaUtil * 100)
 
+    console.log('')
+    console.log('------------- R E S U L T A D O -------------')
     console.log(`O equipamento gerou um lucro de R$${custoTotal.toLocaleString('pt-BR')}.`)
     console.log(`A vida útil do equipamento é de ${a.valores.vidaUtil.toFixed(0)}%.`)
     console.log('')
