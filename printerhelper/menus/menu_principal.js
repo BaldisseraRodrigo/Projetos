@@ -1,7 +1,7 @@
 //PRINTER HELPER
 const submenus = require("./submenus")
-const menuCalcVidaUtil = require("./calc_util")
-const calcCombustivel = require("./calc_comb")
+const menuCalcVidaUtil = require("../apps/calc_util")
+const calcCombustivel = require("../apps/calc_comb")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null

@@ -1,4 +1,4 @@
-const ecosys = require("./kyocera")
+const ecosys = require("../equipametos/kyocera")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null

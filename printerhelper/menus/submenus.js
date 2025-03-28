@@ -1,8 +1,8 @@
 const manutKyocera = require("./menu_manuts")
-const tabelasFirmware = require("./tabela_firmware")
-const tabelasToners = require("./tabela_toners")
-const checklists = require("./checklists")
-const tabelasEquipamentos = require("./tabela_equipamentos")
+const tabelasFirmware = require("../tabelas/tabela_firmware")
+const tabelasToners = require("../tabelas/tabela_toners")
+const checklists = require("../checklists/checklists")
+const tabelasEquipamentos = require("../tabelas/tabela_equipamentos")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null

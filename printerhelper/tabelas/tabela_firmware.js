@@ -1,6 +1,6 @@
-const ecosys = require("./kyocera")
-const ricoh = require("./ricoh")
-const lexmark = require("./lexmark")
+const ecosys = require("../equipametos/kyocera")
+const ricoh = require("../equipametos/ricoh")
+const lexmark = require("../equipametos/lexmark")
 const prompt = require("prompt-sync")()
 let opcao = null
 

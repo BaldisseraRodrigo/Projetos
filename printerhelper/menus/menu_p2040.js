@@ -1,5 +1,5 @@
-const solucaoProblema = require("./solucao_problema")
-const solucaoErro = require("./solucao_erro")
+const solucaoProblema = require("../checklists/solucao_problema")
+const solucaoErro = require("../checklists/solucao_erro")
 const prompt = require("prompt-sync")()
 console.clear()
 let opcao = null
