@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Casamento de Larissa e Rodrigo</title>
+    <link rel="stylesheet" href="./estilo/estilo.css">
+    <link rel="stylesheet" href="./estilo/form.css">
+    <script>
+        function calc_total() {
+            let qtd = parseInt(document.getElementById("cQtd").value)
+            let tot = qtd * 1500;
+            document.getElementById('cTot').value = tot
+        }
+    </script>
+</head>
+<script src="javascript/funcoes.js"></script>
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul>
+                <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/fale-conosco.png')"><a href="index.html">Home</a></li>
+                <li onmouseover="mudaFoto('imagens/votos.png')" onmouseout="mudaFoto('imagens/fale-conosco.png')"><a href="index.html"><a href="votos.html">Votos</a></li>
+                <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/fale-conosco.png')"><a href="index.html"><a href="fotos.html">Fotos</a></li>
+                <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/fale-conosco.png')"><a href="index.html"><a href="multimidia.html">Multimídia</a></li>
+                <li onmouseover="mudaFoto('imagens/fale-conosco.png')" onmouseout="mudaFoto('imagens/fale-conosco.png')"><a href="index.html"><a href="fale-conosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+        <h1>WEB-ÁLBUM</h1>
+        <h2>Larissa & Rodrigo</h2> 
+        <img id="icone" src="imagens/lariroh.png"><br>
+    </header>
+    <form method="post" id="fContato" action="mailto:rohbaldissera86@gmail.com" oninput="calc_total();">
+        <fieldset id="usuario"><legend>Identificação do Visitante</legend>
+
+            <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo"></p>
+            <p><label for="cSenha">Senha: </label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+            <p><label for="cEmail">E-mail: </label><input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="email@email.com"></p>
+            <fieldset id="sexo"><legend>Sexo:</legend>
+                <input type="radio" name="tSexo" id="cMasc"><label for="cMasc">Masculino</label><br>
+                <input type="radio" name="tSexo" id="cFem" checked><label for="cFem">Feminino</label>
+            </fieldset>
+            <p><label for="cData">Data de Nascimento: </label><input type="date" name="tData" id="cData"></p>
+        </fieldset>
+
+        <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+            <p><label for="cLogradouro">Logradouro: </label><input type="text" size="20" maxlength="30" placeholder="Rua, Avenida, Estrada" name="tLogradouro" id="cLogradouro"></p>
+            <p><label for="cNumero">Número: </label><input type="number" name="tNumero" id="cNumero" min="0" max="99999" placeholder="12345"></p>
+            <p><label for="cEstado">Estado: </label>
+                <select name="tEstado" id="cEstado">
+                <optgroup label="Região Sudeste">
+                        <option value="mg">Minas Gerais</option>
+                        <option value="es">Espirito Santo</option>
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="sp">São Paulo</option>
+                </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="pr">Paraná</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="rs">Rio Grande do Sul</option>
+                </optgroup>
+                </select></p>
+            <p><label for="cCidade">Cidade: </label><input type="text" name="tCidade" id="cCidade" maxlength="40" size="20" placeholder="Sua cidade" list="cidades"></p>
+            <datalist id="cidades">
+                <option value="Rio de Janeiro"></option>
+                <option value="Nova Iguaçu"></option>
+                <option value="Niterói"></option>
+                <option value="Belford Roxo"></option>
+            </datalist>
+        </fieldset>
+
+        <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+            <p><label for="cGrau">Grau de Urgência: </label>Mín<input type="range" name="tGrau" id="cGrau" min="0" max="10" step="2">Máx</p>
+            <p><label for="cMensagem">Mensagem: </label><textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui a sua mensagem..."></textarea></p>
+        </fieldset>
+
+        <fieldset id="pedido"><legend>Quero um WEB-ÁLBUM</legend>
+            <p><input type="checkbox" name="tPed" id="cPed" checked><label for="cPed">Gostaria de adquirir um WEB-ÁLBUM</label></p>
+            <p><label for="cCor">Cor: </label><input type="color" name="tCor" id="cCor"></p>
+            <p><label for="cQtd">Quantidade: </label><input type="number" name="tQtd" id="cQtd" min="0" max="5"></p>
+            <p><label for="cTot">Preço Total: R$ </label><input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+        </fieldset>
+
+            <input type="submit" id="cEnviar" name="tEnviar" value="Enviar">
+            
+    </form>
+<footer>
+    <p>Copyright &copy; 2025 - by Rodrigo Baldissera <br>
+    <a href="https://www.linkedin.com/in/rodrigo-baldissera-9570172a7/" target="_blank">Linkedin</a> | <a href="https://github.com/BaldisseraRodrigo" target="_blank"> GitHub</a></p>
+</footer>
+</body>
+</html>

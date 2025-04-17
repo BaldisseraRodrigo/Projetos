@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../fontes/Milonga-Regular.ttf");
+}
+
+#galeria h1 {
+    text-align: center;
+    margin: 50px auto auto auto;
+}
+
+#album-fotos {
+    width: 522px;
+    margin: auto;
+    padding: 100px;
+    overflow: hidden;
+    list-style: none;
+}
+
+#album-fotos li {
+    float: left;
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid #c0c0c0;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    -webkit-transition: all .3s ease-in;
+    border-radius: 5px;
+}
+
+#album-fotos li span {
+    opacity: 0;
+    color: white;
+    text-shadow: 1px black;
+    background-color: rgba(0, 0, 0, .3);
+    line-height: 187px;
+    padding: 2px;
+    font-size: 5pt;
+    border-radius: 5px;
+}
+
+#album-fotos li:hover {
+    -webkit-transform: scale(2.4);
+}
+
+#album-fotos li:hover span {
+    opacity: 1;
+}
+
+#foto01 {
+    background: url(../imagens/galeria-01.JPG) no-repeat;
+    background-position: 50% 50%;
+    background-color: #ffffff;
+}
+
+#foto01:hover {
+    background-size: 100%;
+}
+
+#foto02 {
+    background: url(../imagens/galeria-02.JPG) no-repeat;
+    background-position: 34% 40%;
+    background-color: #ffffff;
+}
+
+#foto02:hover {
+    background-size: 100%;
+}
+
+#foto03 {
+    background: url(../imagens/galeria-03.JPG) no-repeat;
+    background-position: 67% 62%;
+    background-color: #ffffff;
+}
+
+#foto03:hover {
+    background-size: 100%;
+}
+
+#foto04 {
+    background: url(../imagens/galeria-04.JPG) no-repeat;
+    background-position: 62% 68%;
+    background-color: #ffffff;
+}
+
+#foto04:hover {
+    background-size: 100%;
+}
+
+#foto05 {
+    background: url(../imagens/galeria-05.JPG) no-repeat;
+    background-position: 70% 90%;
+    background-color: #ffffff;
+}
+
+#foto05:hover {
+    background-size: 100%;
+}
+
+#foto06 {
+    background: url(../imagens/galeria-06.JPG) no-repeat;
+    background-position: 70% 50%;
+    background-color: #ffffff;
+}
+
+#foto06:hover {
+    background-size: 100%;
+}
+
+#foto07 {
+    background: url(../imagens/galeria-07.JPG) no-repeat;
+    background-position: 48% 74%;
+    background-color: #ffffff;
+}
+
+#foto07:hover {
+    background-size: 100%;
+}
+
+#foto08 {
+    background: url(../imagens/galeria-08.JPG) no-repeat;
+    background-position: 54% 40%;
+    background-color: #ffffff;
+}
+
+#foto08:hover {
+    background-size: 100%;
+}
+
+#foto09 {
+    background: url(../imagens/galeria-09.JPG) no-repeat;
+    background-position: 78% 5%;
+    background-color: #ffffff;
+}
+
+#foto09:hover {
+    background-size: 100%;
+}

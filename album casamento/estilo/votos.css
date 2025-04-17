@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../fontes/Milonga-Regular.ttf");
+}
+
+/*Formatação da página votos*/
+#votos {
+    display: block;
+    margin: 100px 235px 100px 235px;
+    padding: 0;
+}
+
+#votos h1 {
+    text-align: center;
+    margin: -50px auto 50px auto;
+}
+
+.voto {
+    height: 250px;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #c0c0c0;
+}
+
+iframe {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
+}
+
+#frame-votos {
+    height: 280px;
+    width: 440px;
+    border: none;
+}
+
+/*Formatação dos textos votos*/
+#votos-casal {
+    font-size: 13px;
+    width: 430px;
+    background-color: white;
+    margin: -15px 0 0 -10px;
+    padding: -10px;
+}
+
+article {
+    text-align: center;
+    margin: -10px 1px 50px -10px;
+    padding: -10px 1px 0 1px;
+    width: 420px;
+}

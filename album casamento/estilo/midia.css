@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../fontes/Milonga-Regular.ttf");
+}
+
+#tv-radio {
+    width: 900px;
+    height: 580px;
+    margin: auto;
+    background: url(../imagens/tv-radio.png) no-repeat;
+}
+
+#tv-radio h1 {
+    text-align: center;
+}
+
+#musica {
+    display: block;
+    position: relative;
+    left: 380px;
+    top: 362px;
+    scale: .65;
+}
+
+#video {
+    display: block;
+    position: relative;
+    right: 785px;
+    top: -405px;
+    scale: .12;
+}

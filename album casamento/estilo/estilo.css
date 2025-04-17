@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../fontes/Milonga-Regular.ttf");
+}
+
+body {
+    background-color: #c0c0c0;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'FonteLogo';
+}
+
+a {
+    color: #808080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div#interface {
+    width: 900px;
+    background-color: white;
+    margin: -20px auto 0px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+header#cabecalho {
+    border-bottom: 1px black dashed;
+    background: url("../imagens/l_&_r.png") no-repeat 0px 190px;
+}
+
+header#cabecalho img#icone {
+    display: block;
+    position: relative;
+    margin: 0px 0px 0px 670px;
+    border-radius: 5px;
+}
+
+header#cabecalho h1 {
+    font-size: 30pt;
+    color: #404040;
+    text-shadow: 1px 1px 1px black;
+    padding: 0px;
+    margin: -40px 0px 0px 0px;
+}
+
+header#cabecalho h2 {
+    color: #808080;
+    font-size: 15pt;
+    padding: 0px;
+    margin: 0px;
+}
+
+.convite {
+    text-align: center;
+    margin: 50px 180px 50px 180px;
+}
+
+td {
+    padding: 10px;
+}
+
+#lariroh {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+span {
+    font-weight: bolder;
+    font-size: smaller;
+}
+
+.ce {
+    text-align: right;
+}
+
+.cd {
+    text-align: left;
+}
+
+/* Formatação do menu */
+
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0px -10px 0px 0px;
+    padding: 5px 0px 0px 360px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: #c0c0c0;
+    padding: 10px;
+    margin: 2px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+nav#menu li:hover {
+    background-color: #808080;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: #404040;
+    text-decoration: none;
+}
+
+nav#menu a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/*Formatação do rodapé*/
+
+footer {
+    border-top: 1px black dashed;
+    text-align: center;
+}

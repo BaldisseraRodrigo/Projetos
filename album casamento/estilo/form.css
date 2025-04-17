@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../fontes/Milonga-Regular.ttf");
+}
+
+form {
+    width: 500px;
+    margin: auto;
+}
+
+input {
+    font-weight: normal;
+    font-size: 13pt;
+}
+
+input:hover, textarea:hover {
+    background-color: #c0c0c0;
+}
+
+legend {
+    color: #808080;
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+fieldset {
+    border-color: #c0c0c0;
+    margin: 20px;
+}
+
+#sexo {
+    width: 150px;
+}
+
+input#cEnviar {
+    margin: auto auto 20px 20px;
+}
