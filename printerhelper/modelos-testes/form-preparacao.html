@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Preparação</title>
+    <style>
+        @media print {
+            footer, #imprimir {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="interface">
+    <header id="cabecalho">
+        <h1>Preparação de Equipamento</h1>
+    </header>
+    <form>
+        <fieldset id="desembalar"><legend>DESEMBALAR</legend>
+
+            <p><input type="checkbox" id="d1"><label for="d1"> RETIRAR todos os lacres do equipamento;</label></p>
+            <p><input type="checkbox" id="d2"><label for="d2"> RETIRAR os lacres do scanner e MONTAR o ADF (TASKalfa);</label></p>
+            <p><input type="checkbox" id="d3"><label for="d3"> MONTAR a caixa de resíduos (ECOSYS);</label></p>
+            <p><input type="checkbox" id="d4"><label for="d4"> MONTAR o toner e TRAVAR (AGUARDAR a adição do toner);</label></p>
+            <p><input type="checkbox" id="d5"><label for="d5"> TROCAR os encartes para o português;</label></p>
+            <p><input type="checkbox" id="d6"><label for="d6"> COLAR os adesivos de fábrica;</label></p>
+        </fieldset>
+
+        <fieldset id="config"><legend>CONFIGURAR</legend>
+            <p><input type="checkbox" id="c1"><label for="c1"> ALTERAR para modo Europe (1087-1087-252);</label></p>
+            <p><input type="checkbox" id="c2"><label for="c2"> ALTERAR o idioma para Portugês Brasil;</label></p>
+            <p><input type="checkbox" id="c3"><label for="c3"> ALTERAR o fuso horário para Brasília (GMT-3:00), AJUSTAR data e hora;</label></p>
+            <p><input type="checkbox" id="c4"><label for="c4"> ALTERAR cronômetro do modo inativo para máximo (60/120/240min);</label></p>
+            <p><input type="checkbox" id="c5"><label for="c5"> ALTERAR tamanho de papel das bandejas para A4 e A3 (TASKalfa);</label></p>
+            <p><input type="checkbox" id="c6"><label for="c6"> COLOR: HABILITAR níveis de toner (1087-1087-332);</label></p>
+            <p><input type="checkbox" id="c7"><label for="c7"> COLOR: ALTERAR preto puro (1087-1087-486-MODE1);</label></p>
+
+        </fieldset>
+
+        <fieldset id="final"><legend>FINALIZAR</legend>
+            <p><input type="checkbox" id="f1"><label for="f1"> IMPRIMIR Página de Status e DEIXAR sobre o equipamento;</label></p>
+            <p><input type="checkbox" id="f2"><label for="f2"> COLAR a etiqueta QR CODE da Printer do Brasil;</label></p>
+            <p><input type="checkbox" id="f3"><label for="f3"> SEPARAR o cabo de força;</p>
+        </fieldset>
+
+        <fieldset id="tecnico">
+            <p><label for="tTecn">Técnico Responsável: </label><input id="tTecn" type="text" placeholder="Nome e Sobrenome"></p>
+            <p><label for="tData">Data: </label><input type="date" id="tData"></p>
+            
+    
+        </fieldset>
+            <br>
+            <input type="button" id="imprimir" value="Imprimir" onclick="window.print()">
+            
+    </form>
+<footer>
+    <p>Copyright &copy; 2025 - by Rodrigo Baldissera <br>
+    <a href="https://www.linkedin.com/in/rodrigo-baldissera-9570172a7/" target="_blank">Linkedin</a> | <a href="https://github.com/BaldisseraRodrigo" target="_blank"> GitHub</a></p>
+</footer>
+</body>
+</html>
