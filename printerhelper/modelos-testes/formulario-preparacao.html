@@ -14,11 +14,15 @@
 <body>
 <div id="interface">
     <header id="cabecalho">
-        <h1>Preparação de Equipamento</h1>
+        <h1>Preparação de Equipamento Novo</h1>
     </header>
     <form>
-        <fieldset id="desembalar"><legend>DESEMBALAR</legend>
+        <fieldset id="os">
+            <p><label for="nOs">Ordem de Serviço: </label><input id="nOs" type="number"style="width: 80px;" min="0"></p>
+            <p><label for="tModel">Modelo: </label><input id="tModel" type="text" size="30"></p>
+        </fieldset>
 
+        <fieldset id="desembalar"><legend>DESEMBALAR</legend>
             <p><input type="checkbox" id="d1"><label for="d1"> RETIRAR todos os lacres do equipamento;</label></p>
             <p><input type="checkbox" id="d2"><label for="d2"> RETIRAR os lacres do scanner e MONTAR o ADF (TASKalfa);</label></p>
             <p><input type="checkbox" id="d3"><label for="d3"> MONTAR a caixa de resíduos (ECOSYS);</label></p>
@@ -45,7 +49,7 @@
         </fieldset>
 
         <fieldset id="tecnico">
-            <p><label for="tTecn">Técnico Responsável: </label><input id="tTecn" type="text" placeholder="Nome e Sobrenome"></p>
+            <p><label for="tTecn">Técnico Responsável: </label><input id="tTecn" type="text" placeholder="Nome e Sobrenome" size="30"></p>
             <p><label for="tData">Data: </label><input type="date" id="tData"></p>
             
     
@@ -55,8 +59,7 @@
             
     </form>
 <footer>
-    <p>Copyright &copy; 2025 - by Rodrigo Baldissera <br>
-    <a href="https://www.linkedin.com/in/rodrigo-baldissera-9570172a7/" target="_blank">Linkedin</a> | <a href="https://github.com/BaldisseraRodrigo" target="_blank"> GitHub</a></p>
+    
 </footer>
 </body>
 </html>
