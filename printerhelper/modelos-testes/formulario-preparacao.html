@@ -4,17 +4,50 @@
     <meta charset="UTF-8">
     <title>Formulário de Preparação</title>
     <style>
+
+        body {
+            background-color: gray;
+        }
+
         @media print {
-            footer, #imprimir {
+            footer, #button {
                 display: none;
             }
         }
+
+        #interface {
+            display: block;
+            height: max-content;
+            width: max-content;
+            margin: auto;
+            background-color: white;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin: 10px auto 10px auto;
+        }
+
+        #button {
+            margin-top: 10px;
+        }
+
+        #imprimir {
+            display: block;
+            margin: auto;
+        }
+
     </style>
 </head>
 <body>
 <div id="interface">
     <header id="cabecalho">
-        <h1>Preparação de Equipamento Novo</h1>
+        <img src="./printer-logo.jpeg">
+        <h1>Preparação de Equipamento</h1>
     </header>
     <form>
         <fieldset id="os">
@@ -49,13 +82,14 @@
         </fieldset>
 
         <fieldset id="tecnico">
-            <p><label for="tTecn">Técnico Responsável: </label><input id="tTecn" type="text" placeholder="Nome e Sobrenome" size="30"></p>
             <p><label for="tData">Data: </label><input type="date" id="tData"></p>
-            
+            <p><label for="tTecn">Técnico Responsável: </label><input id="tTecn" type="text" placeholder="Nome e Sobrenome" size="30"></p>
     
         </fieldset>
-            <br>
+        <div id="button">
             <input type="button" id="imprimir" value="Imprimir" onclick="window.print()">
+        </div>
+            
             
     </form>
 <footer>
