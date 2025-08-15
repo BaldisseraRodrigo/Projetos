@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Retirada</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    h2 {
+        text-align: center;
+    }
+    #areaImagem {
+        margin-top: 15px;
+        width: auto;
+        height: auto;
+        border: 2px dashed #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    #areaImagem img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #imprimir {
+        display: block;
+        margin: 15px auto;
+    }
+    @media print {
+        footer, .button {
+            display: none;
+        }
+        #stsPg {
+            page-break-before: always;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h2>FORMULÁRIO DE RETIRADA</h2>
+<form>
+    <fieldset><legend>DADOS PRINCIPAIS</legend>
+        <p>
+        <label for="nOs">OS: </label><input id="nOs" type="number" style="width: 80px;" min="0">
+        </p>
+
+        <p>
+        <label for="tTr">Técnico Responsável: </label><input id="tTr" type="text" placeholder="Nome e Sobrenome" size="15">
+        </p>
+
+        <p>
+        <label for="tTa">Técnico Auxiliar: </label><input id="tTa" type="text" placeholder="Nome e Sobrenome" size="15">
+        </p>
+
+        <p>Cliente: 
+            <select id="cliente">
+                <option value="cel">Prefeitura Municipal de Cascavel</option>
+                <option value="cas">Prefeitura Municipal de Castro</option>
+                <option value="col">Prefeitura Municipal de Colombo</option>
+                <option value="frg">Prefeitura Municipal de Fazenda Rio Grande</option>
+                <option value="foz">Prefeitura Municipal de Foz do Iguaçu</option>
+                <option value="ita">Prefeitura Municipal de Itaipulândia</option>
+                <option value="maf">Prefeitura Municipal de Mafra</option>
+                <option value="mis">Prefeitura Municipal de Missal</option>
+                <option value="pga">Prefeitura Municipal de Paranaguá</option>
+                <option value="man">Prefeitura Municipal de Mandirituba</option>
+                <option value="pie">Prefeitura Municipal de Pien</option>
+                <option value="pga">Prefeitura Municipal de Paranaguá</option>
+                <option value="pin">Prefeitura Municipal de Pinhais</option>
+                <option value="pqa">Prefeitura Municipal de Piraquara</option>
+                <option value="rbs">Prefeitura Municipal de Rio Branco do Sul</option>
+                <option value="sti">Prefeitura Municipal de Santa Terezinha de Itaipú</option>
+                <option value="sbe">Prefeitura Municipal de São Bento</option>
+                <option value="spi">Prefeitura Municipal de São Pedro do Iguaçu</option>
+                <option value="sig">Prefeitura Municipal de Serranópolis do Iguaçu</option>
+                <option value="tds">Prefeitura Municipal de Tijucas do Sul</option>
+            </select>
+        </p>
+        
+        <p>
+        <label for="tLocal"> Local: </label><input id="tLocal" type="text" size="15">
+        </p>
+        
+        <p>
+        <label for="tSetor"> Setor: </label><input id="tSetor" type="text" size="15">
+        </p> 
+    </fieldset>
+
+    <fieldset><Legend>TIPO DE RETIRADA</Legend>
+        <p><input type="radio" id="r1" name="retirada" checked=""><label for="r1">Substituída</label>
+        <p><input type="radio" id="r3" name="retirada"><label for="r3">Retirada Definitiva</label></p>
+        <p><input type="radio" id="r2" name="retirada"><label for="r2">Retirada para Manutenção</label>
+        <fieldset><legend>Backup</legend>
+            <p><input type="radio" id="b1" name="backup"><label for="b1">Sim</label>
+            <input type="radio" id="b2" name="backup" checked=""><label for="b2">Não</label>
+            </p>
+        </fieldset></p>
+    </fieldset>
+
+    <fieldset><legend>OUTRAS INFORMAÇÕES</legend>
+        <p><input type="checkbox" id="c1"><label for="c1">RETIRAR do PrintWayy</label></p>
+        <p><input type="checkbox" id="c2"><label for="c2">RETIRAR Suprimentos</label></p>
+        <p><input type="checkbox" id="c3"><label for="c3">IMPRIMIR Página de Status</label></p>
+    </fieldset>
+
+</form><br>
+
+<div class="button">
+    <input type="file" id="inputImagem" accept="image/*">
+</div>
+
+<div id="areaImagem">
+    <span>Pré-visualização da imagem</span>
+</div>
+
+<div class="button">
+    <input type="button" id="imprimir" value="Imprimir" onclick="window.print()">
+</div>
+
+<script>
+    document.getElementById('inputImagem').addEventListener('change', function(event) {
+        const arquivo = event.target.files[0];
+        if (arquivo) {
+            const leitor = new FileReader();
+            leitor.onload = function(e) {
+                const area = document.getElementById('areaImagem');
+                area.innerHTML = `<img src="${e.target.result}" alt="Imagem escolhida">`;
+            }
+            leitor.readAsDataURL(arquivo);
+        }
+    });
+</script>
+
+</body>
+</html>

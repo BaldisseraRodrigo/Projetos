@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Instalação</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    h2 {
+        text-align: center;
+    }
+    #areaImagem {
+        margin-top: 15px;
+        width: auto;
+        height: auto;
+        border: 2px dashed #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    #areaImagem img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #imprimir {
+        display: block;
+        margin: 15px auto;
+    }
+    @media print {
+        footer, .button {
+            display: none;
+        }
+        #stsPg {
+            page-break-before: always;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h2>FORMULÁRIO DE INSTALAÇÃO</h2>
+<form>
+    <fieldset><legend>DADOS PRINCIPAIS</legend>
+        <p>
+        <label for="nOs">OS: </label><input id="nOs" type="number" style="width: 80px;" min="0">
+        </p>
+
+        <p>
+        <label for="tTr">Técnico Responsável: </label><input id="tTr" type="text" placeholder="Nome e Sobrenome" size="15">
+        </p>
+
+        <p>
+        <label for="tTa">Técnico Auxiliar: </label><input id="tTa" type="text" placeholder="Nome e Sobrenome" size="15">
+        </p>
+
+        <p>Cliente: 
+            <select id="cliente">
+                <option value="cel">Prefeitura Municipal de Cascavel</option>
+                <option value="cas">Prefeitura Municipal de Castro</option>
+                <option value="col">Prefeitura Municipal de Colombo</option>
+                <option value="frg">Prefeitura Municipal de Fazenda Rio Grande</option>
+                <option value="foz">Prefeitura Municipal de Foz do Iguaçu</option>
+                <option value="ita">Prefeitura Municipal de Itaipulândia</option>
+                <option value="maf">Prefeitura Municipal de Mafra</option>
+                <option value="mis">Prefeitura Municipal de Missal</option>
+                <option value="pga">Prefeitura Municipal de Paranaguá</option>
+                <option value="man">Prefeitura Municipal de Mandirituba</option>
+                <option value="pie">Prefeitura Municipal de Pien</option>
+                <option value="pga">Prefeitura Municipal de Paranaguá</option>
+                <option value="pin">Prefeitura Municipal de Pinhais</option>
+                <option value="pqa">Prefeitura Municipal de Piraquara</option>
+                <option value="rbs">Prefeitura Municipal de Rio Branco do Sul</option>
+                <option value="sti">Prefeitura Municipal de Santa Terezinha de Itaipú</option>
+                <option value="sbe">Prefeitura Municipal de São Bento</option>
+                <option value="spi">Prefeitura Municipal de São Pedro do Iguaçu</option>
+                <option value="sig">Prefeitura Municipal de Serranópolis do Iguaçu</option>
+                <option value="tds">Prefeitura Municipal de Tijucas do Sul</option>
+            </select>
+        </p>
+        
+        <p>
+        <label for="tLocal"> Local: </label><input id="tLocal" type="text" size="15">
+        </p>
+        
+        <p>
+        <label for="tSetor"> Setor: </label><input id="tSetor" type="text" size="15">
+        </p> 
+    </fieldset>
+
+    <fieldset><Legend>PRÉ-INSTALAÇÃO</Legend>
+        <p>
+        <input type="checkbox" id="p1"><label for="p1">VERIFICAR a infras-estrutura do local (tomada, ponto de rede e balcão);</label>
+        </p>
+        <p>
+        <input type="checkbox" id="p2"><label for="p2">POSICIONAR o equipamento no local definido previamente;</label>
+        </p>
+        <p>
+        <input type="checkbox" id="p3"><label for="p3">CONECTAR os cabos de força e dados (rede ou USB) e LIGAR o equipamento;</label>
+        </p>
+    </fieldset>
+
+    <fieldset><legend>CONFIGURAÇÕES</legend>
+        <p>
+        <input type="checkbox" id="c1"><label for="c1">APLICAR os níveis de toner (COLOR);</label>
+        </p>
+        <p>
+        <input type="checkbox" id="c2"><label for="c2">DEFINIR os endereços de IP, máscara de sub-rede e gateway (REDE);</label>
+        </p>
+        <p>
+        <input type="checkbox" id="c3"><label for="c3">INSTALAR o Driver nos computadores ou servidor;</label>
+        </p>
+        <p>
+        <input type="checkbox" id="c4"><label for="c4">CONFIGURAR o Scanner para os usuários (MULTI);</label>
+        </p>
+        <p>
+        <input type="checkbox" id="c5"><label for="c5">INSTALAR o PrintWayy em um computador e monitorar o equipamento;</label>
+        </p>
+        <p>
+        <input type="checkbox" id="c5"><label for="c5">ATUALIZAR o  firmware;</label>
+        </p>
+    </fieldset>
+
+    <fieldset><legend>INSTRUÇÕES DE USO</legend>
+        <p><input type="checkbox" id="i1"><label for="i1">ORIENTAR os usuários como adicionar papel e substituição do toner;</label></p>
+        <p><input type="checkbox" id="i2"><label for="i2">MOSTRAR aos usuários o driver instalado e as opções de impressão;</label></p>
+        <p><input type="checkbox" id="i3"><label for="i3">INSTRUIR os usuários como utilizar as funções de cópia e digitalização (MULTI);</label></p>
+    </fieldset>
+
+</form><br>
+
+<div class="button">
+    <input type="file" id="inputImagem" accept="image/*">
+</div>
+
+<div id="areaImagem">
+    <span>Pré-visualização da imagem</span>
+</div>
+
+<div class="button">
+    <input type="button" id="imprimir" value="Imprimir" onclick="window.print()">
+</div>
+
+<script>
+    document.getElementById('inputImagem').addEventListener('change', function(event) {
+        const arquivo = event.target.files[0];
+        if (arquivo) {
+            const leitor = new FileReader();
+            leitor.onload = function(e) {
+                const area = document.getElementById('areaImagem');
+                area.innerHTML = `<img src="${e.target.result}" alt="Imagem escolhida">`;
+            }
+            leitor.readAsDataURL(arquivo);
+        }
+    });
+</script>
+
+</body>
+</html>
