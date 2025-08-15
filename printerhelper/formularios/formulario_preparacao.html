@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Preparação</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    h2 {
+        text-align: center;
+    }
+    #areaImagem {
+        margin-top: 15px;
+        width: auto;
+        height: auto;
+        border: 2px dashed #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    #areaImagem img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #imprimir {
+        display: block;
+        margin: 15px auto;
+    }
+    @media print {
+        footer, .button {
+            display: none;
+        }
+        #stsPg {
+            page-break-before: always;
+        }
+    }
+</style>
+</head>
+<body>
+
+<h2>FORMULÁRIO DE PREPARAÇÃO</h2>
+<form>
+    <fieldset><legend>DADOS PRINCIPAIS</legend>
+        <p><label for="nOs">OS: </label><input id="nOs" type="number" style="width: 80px;" min="0">
+        <label for="date">Data: </label><input id="date" type="date"></p>
+        <p><label for="tTr">Técnico Responsável: </label><input id="tTr" type="text" placeholder="Nome e Sobrenome" size="20"></p>
+    </fieldset>
+
+    <fieldset><Legend>MONTAGEM</Legend>
+        <p><input type="checkbox" id="m1"><label for="m1">RETIRAR os lacres do equipamento;</label></p>
+        <p><input type="checkbox" id="m2"><label for="m2">MONTAR os encartes em Português no painel ;</label></p>
+        <p><input type="checkbox" id="m3"><label for="m3">MONTAR ADF e retirar a trava do scanner (modelos A3);</label></p>
+        <p><input type="checkbox" id="m4"><label for="m4">MONTAR a caixa de resíduos;</label></p>
+        <p><input type="checkbox" id="m5"><label for="m5">MONTAR o(s) toner(s);</label></p>
+        <p><input type="checkbox" id="m6"><label for="m6">LIGAR o equipamento para a adição de toner;</label></p>
+        <p><input type="checkbox" id="m7"><label for="m7">ATUALIZAR o firmware;</label></p>
+    </fieldset>
+
+    <fieldset><legend>MODO DE MANUTENÇÃO (1087 1087)</legend>
+        <p><input type="checkbox" id="mM1"><label for="mM1">ATUALIZAR o preto puro para equipamento COLOR (486 Mode 1);</label></p>
+        <p><input type="checkbox" id="mM2"><label for="mM2">HABILITAR os níveis de cores para equipamento COLOR (332);</label></p>
+        <p><input type="checkbox" id="mM3"><label for="mM3">ALTERAR o equipamento para modo Europeu (252);</label></p>
+    </fieldset>
+
+    <fieldset><legend>CONFIGURAÇÕES</legend>
+        <p><input type="checkbox" id="c1"><label for="c1">ALTERAR o idioma para Português Brasil;</label></p>
+        <p><input type="checkbox" id="c2"><label for="c2">ALTERAR o fuso-horário para Brasília GMT -3:00;</label></p>
+        <p><input type="checkbox" id="c3"><label for="c3">AJUSTAR a data e hora;</label></p>
+        <p><input type="checkbox" id="c4"><label for="c4">AJUSTAR o modo de inatividade para o máximo;</label></p>
+        <p><input type="checkbox" id="c5"><label for="c5">AJUSTAR os tamanhos de papel e tipo de todas as bandejas;</label></p>
+        <p><input type="checkbox" id="c6"><label for="c6">COLAR a etiqueta;</label></p>
+    </fieldset>
+
+    <fieldset><legend>TESTES</legend>
+        <p><input type="checkbox" id="t1"><label for="t1">IMPRIMIR a página de status;</label></p>
+        <p><input type="checkbox" id="t2"><label for="t2">TESTAR o equipamento na rede;</label></p>
+        <p><input type="checkbox" id="t3"><label for="t3">TESTAR a digitalização normal e frente-verso;</label></p>
+        <p><input type="checkbox" id="t4"><label for="t4">TESTAR a cópia normal e frente-verso;</label></p>
+    </fieldset>
+
+    <fieldset><legend>FINALIZAÇÃO</legend>
+        <p><input type="checkbox" id="f1"><label for="f1">COLAR a etiqueta;</label></p>
+        <p><input type="checkbox" id="f2"><label for="f2">DEIXAR sobre o equipamento o cabo de força e a página de status;</label></p>
+        <p><input type="checkbox" id="f3"><label for="f3">EMBALAR o equipamento e colocar no palete de equipamentos prontos;</label></p>
+    </fieldset>
+</form><br>
+
+<div class="button">
+    <input type="file" id="inputImagem" accept="image/*">
+</div>
+
+<div id="areaImagem">
+    <span>Pré-visualização da imagem</span>
+</div>
+
+<div class="button">
+    <input type="button" id="imprimir" value="Imprimir" onclick="window.print()">
+</div>
+
+<script>
+    document.getElementById('inputImagem').addEventListener('change', function(event) {
+        const arquivo = event.target.files[0];
+        if (arquivo) {
+            const leitor = new FileReader();
+            leitor.onload = function(e) {
+                const area = document.getElementById('areaImagem');
+                area.innerHTML = `<img src="${e.target.result}" alt="Imagem escolhida">`;
+            }
+            leitor.readAsDataURL(arquivo);
+        }
+    });
+</script>
+
+</body>
+</html>
