@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/71d24eba33.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 <title>PrinterHelper</title>
 </head>
@@ -10,64 +11,22 @@
 
 <header>
     <div class="search">
-        <input type="text" placeholder="Buscar..."> <button>Buscar</button>
+        <input type="text" placeholder="Buscar..."> <button><i id="src-icon" class="fa-solid fa-magnifying-glass" style="color:#000000;"></i></button>
+  
     </div>
 
     <div class="main-header">
-        <h3>Printer do Brasil</h3>
-        <figure>[ÍCONE DE MENUS DO EOS]</figure>
-        <figure>[ÍCONE DO USUÁRIO]</figure>
+        <h3 id="printer">Printer do Brasil</h3>
+        <i class="fa-solid fa-bars" style="color: #000000;"></i>
+        <i class="fa-solid fa-user" style="color: #000000;"></i>
     </div>
 
 </header>
 
-<section>
-    <div>
-        <figure>[LOGOTIPO]</figure>
-        <h3>PRINTERHELPER Ver.1.0</h3>
-    </div>
-    <div>
-        <ul>
-            <li>Home</li>
-            <li>Soluções de Problemas</li>
-                <ul>
-                    <li>Erros</li>
-                    <li>Inatividades</li>    
-                    <li>Manchas</li>
-                    <li>Obstruções</li>
-                </ul>
-
-            <li>Formulários</li>
-                <ul>    
-                    <li>Preparação</li>
-                    <li>Instalação</li>
-                    <li>Manutenção</li>
-                    <li>Retirada</li>
-                    <li>Desmanche</li>
-                </ul>
-
-            <li>Tabelas</li>
-                <ul>
-                    <li>Firmwares</li>
-                    <li>Toners/Cartuchos</li>
-                    <li>Peças</li>
-                    <li>Equipamentos</li>
-                </ul>
-
-               <li>Calculadoras</li>
-                <ul>
-                    <li>Vida Útil de Equipamento</li>
-                    <li>Combustível</li>
-                </ul>
-
-        </ul>
-    </div>
-</section>
-
 <main>
     <div>
-        <h4>Olá Rodrigo Baldissera</h4>
-        <figure>[LOGOTIPO PRINTER HELPER]</figure>
+        <h3 id="hello-user">Olá Rodrigo Baldissera</h3>
+        <img src="./img/printerhelper-logo.png" alt="printerhelper-logo" id="printerhelper-logo">
     </div>
 
     <div>
@@ -96,6 +55,49 @@
             3.3.2-Outras Marcas-->
     </div>
 </main>
+
+<section>
+    <div class="logo">
+        <img src="./img/printerhelper-logo.png" alt="printerhelper-mini-logo">
+        <p>Ver.1.0</p>
+    </div>
+    <div>
+        <ul class="list">
+            <li>Home</li>
+            <li>Soluções de Problemas</li>
+                <ul class="sublist">
+                    <li>Erros</li>
+                    <li>Inatividades</li>    
+                    <li>Manchas</li>
+                    <li>Obstruções</li>
+                </ul>
+
+            <li>Formulários</li>
+                <ul class="sublist">    
+                    <li>Preparação</li>
+                    <li>Instalação</li>
+                    <li>Manutenção</li>
+                    <li>Retirada</li>
+                    <li>Desmanche</li>
+                </ul>
+
+            <li>Tabelas</li>
+                <ul class="sublist">
+                    <li>Firmwares</li>
+                    <li>Toners/Cartuchos</li>
+                    <li>Peças</li>
+                    <li>Equipamentos</li>
+                </ul>
+
+            <li>Calculadoras</li>
+                <ul class="sublist">
+                    <li>Vida Útil de Equipamento</li>
+                    <li>Combustível</li>
+                </ul>
+
+        </ul>
+    </div>
+</section>
 
 <footer>
     <figure>EOS SUITE GLOBAL</figure>

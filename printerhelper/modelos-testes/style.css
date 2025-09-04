@@ -1,9 +1,130 @@
+body {
+  font-family: 'Monaco', sans-serif;
+  background-color: #ffdcc8;
+}
+
 
 header {
   display: flex;
-  padding: 20px;
+  padding: 30px;
+  background-color: #ffffff;
+  margin: -10px -10px auto -10px;
+  box-shadow: 5px 5px 10px #ffb894;
 }
 
 .main-header {
   display: flex;
+  margin: auto 0 auto 0;
 }
+
+.search {
+  margin: auto 20px auto auto;
+}
+
+input {
+  border-radius: 5px;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: auto auto auto -35px;
+}
+
+h3 {
+  margin: auto 10px auto auto;
+}
+
+i {
+  margin: auto 10px auto auto;
+  border-radius: 100%;
+  padding: 10px;
+  background-color: #ffdcc8;
+  cursor: pointer;
+}
+
+#src-icon {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+section {
+  width: max-content;
+  position: relative;
+  margin-left: -5px;
+  margin-top: -100px;
+  background-color: #ffffff;
+  border-left: none;
+  box-shadow: 5px 5px 10px #ffb894;
+}
+
+main {
+  position: absolute;
+  background-color: #ffffff;
+  top: 20%;
+  left: 20%;
+  border-radius: 25px;
+  height: 60%;
+  width: 70%;
+  padding: 50px;
+  box-shadow: 5px 5px 10px #ffb894;
+}
+
+#hello-user {
+  text-align: center;
+  font-size: 25pt;
+  color: #e84400;
+}
+
+#printerhelper-logo {
+  display: block;
+  margin: 50px auto 50px auto;
+}
+
+.logo {
+  width: 75%;
+  margin-bottom: 50px;
+}
+
+.logo img {
+    margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  width: 50%;
+  display: block;
+}
+
+.logo p {
+  text-align: center;
+  margin: auto;
+  width: min-content;
+}
+
+li {
+  padding: 5px;
+}
+
+.list {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.sublist {
+  display: none;
+  list-style-type: none;
+}
+/*
+
+#e13e00
+#e84400
+#ee4a00
+#f55000
+#fc5500
+#ff6d2a
+#ff9460
+#ffb894
+#ffdcc8
+#ffffff
+
+*/
