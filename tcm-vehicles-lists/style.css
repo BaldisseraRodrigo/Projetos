@@ -1,0 +1,115 @@
+*{
+    font-family: "Poppins", sans-serif; /*general font*/
+    color: #1A1A19;
+}
+
+header { /*header block style*/
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    margin: -10px -10px auto -10px;
+    background-color: #F9F8F4;
+    box-shadow: 1px 1px 5px #1A1A19;
+}
+
+header h1 { /*header text style*/
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+section { /*left menu style*/
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #F9F8F4;
+    box-shadow: 1px 1px 5px #1A1A19;
+    height: 100%;
+    bottom: auto;
+    padding: 20px;
+}
+
+section h2 { /*left menu subtitle style*/
+    display: block;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    height: min-content;
+    border-bottom: 2px solid #EFD30B;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+ul { /*list general style*/
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#cat-ul { /*main categories list style (land, sea and air)*/
+    display: block;
+    position: relative;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.sub-cat { /*categories list style*/
+    padding-left: 20px;
+}
+
+.cat{ /*main categories link style*/
+    padding: 3px;
+    text-decoration: none;
+}
+
+.cat:hover { /*mouse move*/
+    background-color: #1A1A19;
+    border-radius: 0px 15px 15px 0px;
+    padding: 3px;
+    color: #EFD30B;
+}
+
+a { /*general links style*/
+    text-decoration: none;
+}
+
+a:hover { /*general links mouse move style*/
+    color: #EFD30B;
+}
+
+main {
+    display: block;
+    position: relative;
+    background-color: #F9F8F4;
+    top: 20%;
+    left: 20%;
+    width: max-content;
+    box-shadow: 1px 1px 5px #1A1A19;
+}
+
+th, td {
+    border: 1px solid #F9F8F4;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: #1A1A19;
+    color: #EFD30B;
+}
+
+td {
+    background-color: #DFDFD9;
+}
+
+
+/*
+F9BE08
+EFD30B
+F9F8F4
+DFDFD9
+1A1A19
+*/
