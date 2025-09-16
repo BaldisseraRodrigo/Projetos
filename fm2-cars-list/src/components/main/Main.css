@@ -1,0 +1,15 @@
+main {
+    box-shadow: 5px 5px 5px #41423A;
+    background-color: #ECE2D2;
+    position: relative;
+    left: 200px;
+    top: 90px;
+    z-index: -2;
+    padding: 150px 300px;
+    border-radius: 10px;
+}
+
+.main-home {
+    color: #ED7D27;
+}
+

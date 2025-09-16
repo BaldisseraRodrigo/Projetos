@@ -1,0 +1,10 @@
+header{
+    background-color: #ED7D27;
+    color: #ECE2D2;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 5px 5px 5px #41423A;
+}
