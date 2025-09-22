@@ -5,7 +5,7 @@ function Header() {
         <>
             <header>
                 <div>
-                    <h1>Forza Motorsport 2 Cars List</h1>
+                    <h1 id='title'>Forza Motorsport 2 Cars List</h1>
                 </div>
             </header>
         </>

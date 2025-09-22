@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import './App.css'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
-import MainHome from './components/main/MainHome'
+import Main from './components/main/Main'
+import './App.css'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <>
      <Header />
      <Navbar />
-     <MainHome />
+     <Main />
     </>
   )
 }
