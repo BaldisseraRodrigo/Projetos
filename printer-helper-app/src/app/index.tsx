@@ -1,12 +1,12 @@
 import { Button } from '@/components/button'
 import { router } from 'expo-router'
 import { StyleSheet, View } from "react-native"
-import Header from './header'
+import Header from '../components/header/header'
 
 export default function Index(){
     
     function handleOption1(){
-        router.navigate('/dashboard')
+        router.navigate('/problems')
     }
 
     function handleOption2(){

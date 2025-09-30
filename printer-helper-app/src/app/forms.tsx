@@ -1,7 +1,7 @@
 import { Button } from '@/components/button'
 import { router } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
-import Header from './header'
+import Header from '../components/header/header'
 
 export default function Forms() {
     return (

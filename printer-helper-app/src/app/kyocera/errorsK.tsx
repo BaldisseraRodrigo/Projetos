@@ -1,20 +1,19 @@
-import { Button } from '@/components/button'
-import { router } from 'expo-router'
+import { BackButton, Button } from '@/components/button'
+import Header from '@/components/header/header'
 import { StyleSheet, View } from 'react-native'
-import Header from '../components/header/header'
 
-export default function Tables() {
+export default function ErrorsK() {
+
     return (
         <View>
             <View>
                 <Header/>
             </View>
             <View style={styles.container}>
-                <Button title='Home' onPress={()=>router.back()}/>
-                <Button title='Firmwares'/>
-                <Button title='Toners'/>
-                <Button title='Peças'/>
-                <Button title='Equipamentos'/>
+                <Button title='E0100'/>
+                <Button title='E6000'/>
+                <Button title='E7000'/>
+                <BackButton/>
             </View>
         </View>
     )

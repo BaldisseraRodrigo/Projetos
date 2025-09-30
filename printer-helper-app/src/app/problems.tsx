@@ -1,9 +1,14 @@
 import { Button } from '@/components/button'
 import { router } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
-import Header from './header'
+import Header from '../components/header/header'
 
-export default function Dashboard() {
+export default function Problems() {
+    
+    function handleOptionErros(){
+        router.navigate('/erros')
+    }
+
     return (
         <View>
             <View>
@@ -11,7 +16,7 @@ export default function Dashboard() {
             </View>
             <View style={styles.container}>
                 <Button title='Home' onPress={()=>router.back()}/>
-                <Button title='Erros'/>
+                <Button title='Erros' onPress={handleOptionErros}/>
                 <Button title='Inatividade'/>
                 <Button title='Manchas'/>
                 <Button title='Obstrução'/>

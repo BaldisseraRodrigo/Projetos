@@ -8,6 +8,14 @@ export const styles = StyleSheet.create({
         borderRadius: 10,
         justifyContent: 'center',
     },
+    backButton: {
+        width: '75%',
+        height: 60,
+        backgroundColor: '#836147ff',
+        borderRadius: 10,
+        justifyContent: 'center',
+        marginTop: 50,
+    },
     title: {
         fontSize: 20,
         fontWeight: 'bold',

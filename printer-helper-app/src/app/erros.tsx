@@ -1,20 +1,25 @@
-import { Button } from '@/components/button'
+import { BackButton, Button } from '@/components/button'
 import { router } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
 import Header from '../components/header/header'
 
-export default function Tables() {
+export default function Problems() {
+        
+    function handleOptionKyocera(){
+        router.navigate('/kyocera/errorsK')
+    }
+
     return (
         <View>
             <View>
                 <Header/>
             </View>
             <View style={styles.container}>
-                <Button title='Home' onPress={()=>router.back()}/>
-                <Button title='Firmwares'/>
-                <Button title='Toners'/>
-                <Button title='Peças'/>
-                <Button title='Equipamentos'/>
+                <Button title='Kyocera' onPress={handleOptionKyocera}/>
+                <Button title='Ricoh'/>
+                <Button title='Lexmark'/>
+                <Button title='Brother'/>
+                <BackButton/>
             </View>
         </View>
     )
