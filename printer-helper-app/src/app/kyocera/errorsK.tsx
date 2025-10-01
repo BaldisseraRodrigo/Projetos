@@ -1,8 +1,13 @@
 import { BackButton, Button } from '@/components/button'
 import Header from '@/components/header/header'
+import { router } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
 
 export default function ErrorsK() {
+
+    function e0100(){
+        router.navigate('./e0100')
+    }
 
     return (
         <View>
@@ -10,7 +15,7 @@ export default function ErrorsK() {
                 <Header/>
             </View>
             <View style={styles.container}>
-                <Button title='E0100'/>
+                <Button title='E0100' onPress={e0100}/>
                 <Button title='E6000'/>
                 <Button title='E7000'/>
                 <BackButton/>

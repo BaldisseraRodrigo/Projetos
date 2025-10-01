@@ -1,12 +1,12 @@
-import { Button } from '@/components/button'
+import { BackButton, Button } from '@/components/button'
 import { router } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
 import Header from '../components/header/header'
 
 export default function Problems() {
     
-    function handleOptionErros(){
-        router.navigate('/erros')
+    function kyocera(){
+        router.navigate('/kyocera/index')
     }
 
     return (
@@ -15,11 +15,11 @@ export default function Problems() {
                 <Header/>
             </View>
             <View style={styles.container}>
-                <Button title='Home' onPress={()=>router.back()}/>
-                <Button title='Erros' onPress={handleOptionErros}/>
-                <Button title='Inatividade'/>
-                <Button title='Manchas'/>
-                <Button title='Obstrução'/>
+                <Button title='Kyocera' onPress={kyocera}/>
+                <Button title='Ricoh'/>
+                <Button title='Lexmark'/>
+                <Button title='Brother'/>
+                <BackButton/>
             </View>
         </View>
     )

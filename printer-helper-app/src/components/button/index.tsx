@@ -21,3 +21,11 @@ export function BackButton(){
         </TouchableOpacity>
     )
 }
+
+export function HomeButton(){
+    return (
+        <TouchableOpacity activeOpacity={.8} style={styles.homeButton} onPress={()=>router.navigate('../index')}>
+            <Text style={styles.title}>Home</Text>
+        </TouchableOpacity>
+    )
+}

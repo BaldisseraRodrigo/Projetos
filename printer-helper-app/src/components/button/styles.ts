@@ -14,7 +14,15 @@ export const styles = StyleSheet.create({
         backgroundColor: '#836147ff',
         borderRadius: 10,
         justifyContent: 'center',
-        marginTop: 50,
+        marginTop: 30,
+    },
+    homeButton: {
+        width: '75%',
+        height: 60,
+        backgroundColor: '#836147ff',
+        borderRadius: 10,
+        justifyContent: 'center',
+        marginBottom: 30,
     },
     title: {
         fontSize: 20,
