@@ -6,7 +6,7 @@ import Header from '../components/header/header'
 export default function Problems() {
     
     function kyocera(){
-        router.navigate('/kyocera/index')
+        router.navigate('./kyocera/index')
     }
 
     return (
