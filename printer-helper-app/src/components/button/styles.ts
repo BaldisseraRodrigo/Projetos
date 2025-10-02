@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     backButton: {
         width: '75%',
         height: 60,
-        backgroundColor: '#836147ff',
+        backgroundColor: '#d9641e',
         borderRadius: 10,
         justifyContent: 'center',
         marginTop: 30,
@@ -19,10 +19,17 @@ export const styles = StyleSheet.create({
     homeButton: {
         width: '75%',
         height: 60,
-        backgroundColor: '#836147ff',
+        backgroundColor: '#d9641e',
         borderRadius: 10,
         justifyContent: 'center',
         marginBottom: 30,
+    },
+    buttonOff: {
+        width: '75%',
+        height: 60,
+        backgroundColor: '#ece2d2',
+        borderRadius: 10,
+        justifyContent: 'center',
     },
     title: {
         fontSize: 20,

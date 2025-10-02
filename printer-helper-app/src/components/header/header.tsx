@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View } from "react-native"
+import { StyleSheet, Text, TextProps, View } from "react-native"
 
-export default function Header(){
+type Props = TextProps & {
+    subtitle: string
+}
+
+export default function Header({ subtitle }: Props){
 
     return (
         <View>
             <View style={styles.header}>
                 <Text style={styles.title}>PRINTER HELPER</Text>
+            </View>
+            <View style={styles.header2}>
+                <Text style={styles.title2}>{subtitle}</Text>
             </View>
         </View>
     )
@@ -20,6 +27,17 @@ const styles = StyleSheet.create({
     title: {
         color:'#f7f7f7',
         fontSize: 30,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    header2: {
+        top: 100,
+        padding: 10,
+        backgroundColor: '#ece2d2'
+    },
+    title2: {
+        color:'#41423a',
+        fontSize: 20,
         fontWeight: 'bold',
         textAlign: 'center',
     },

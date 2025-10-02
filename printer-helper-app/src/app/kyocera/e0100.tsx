@@ -7,21 +7,30 @@ export default function E0100() {
     return (
         <View>
             <View>
-                <Header/>
+                <Header subtitle=''/>
+            </View>
+            <View style={styles.head}>
+                <Text style={styles.title}>Problema</Text>
+            </View>
+            <View style={styles.row}>
+                <Text style={styles.data}>Código de Erro 0100</Text>
+            </View>
+            <View style={styles.head}>
+                <Text style={styles.title}>Causa</Text>
+            </View>
+            <View style={styles.row}>
+                <Text style={styles.data}>É um problema com o dispositivo de memória de backup.</Text>
+            </View>
+            <View style={styles.head}>
+                <Text style={styles.title}>Solução</Text>
+            </View>
+            <View style={styles.row}>
+                <Text style={styles.data}>1.Reinicie a impressora.
+                    2.Certifique-se de que todos os cabos e conexões internas estejam firmes e sem danos.
+                    3.Atualize o firmware.
+                    4.Se as etapas anteriores não resolverem o problema, pode ser necessário substituir a placa principal.</Text>
             </View>
             <View style={styles.container}>
-                <View>
-                    <View style={{flex: 1, backgroundColor: 'red'}}>
-                        <Text>Código de ERRO 0100</Text>
-                    </View>
-                    <View style={{flex: 2, backgroundColor: 'darkorange'}}>
-                        <Text>Código de ERRO 0100</Text>
-                    </View>
-                    <View style={{flex: 3, backgroundColor: 'green'}}>
-                        <Text>Código de ERRO 0100</Text>
-                    </View>
-                </View>
-                
                 <BackButton/>
             </View>
         </View>
@@ -30,10 +39,31 @@ export default function E0100() {
 
 export const styles = StyleSheet.create({
     container: {
-        top: 250,
+        top: 100,
         padding: 30,
         justifyContent: 'center',
         gap: 16,
         alignItems: 'center',
+    },
+    head: {
+        top: 100,
+        padding: 10,
+        justifyContent: 'center',
+        backgroundColor: '#ece2d2',
+        alignItems: 'center',
+    },
+    title: {
+        fontSize: 20,
+        color: '#41423a',
+        fontWeight: 'bold',
+    },
+    row: {
+        top: 100,
+        padding: 10,
+        justifyContent: 'center',
+    },
+    data: {
+        fontSize: 20,
+        color: '#41423a',
     },
 })

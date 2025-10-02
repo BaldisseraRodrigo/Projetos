@@ -5,28 +5,28 @@ import Header from '../components/header/header'
 
 export default function Index(){
     
-    function handleOption1(){
+    function option1(){
         router.navigate('/problems')
     }
 
-    function handleOption2(){
+    function option2(){
         router.navigate('/forms')
     }
 
-    function handleOption3(){
+    function option3(){
         router.navigate('/tables')
     }
 
     return (
         <View>
             <View>
-                <Header/>
+                <Header subtitle='Menu Principal'/>
             </View>
             
             <View style={styles.container}>
-                <Button title='Soluções de Problemas' onPress={handleOption1}/>
-                <Button title='Formulários'onPress={handleOption2}/>
-                <Button title='Tabelas' onPress={handleOption3}/>
+                <Button title='Soluções de Problemas' onPress={option1}/>
+                <Button title='Formulários'onPress={option2}/>
+                <Button title='Tabelas' onPress={option3}/>
             </View>
             
         </View>

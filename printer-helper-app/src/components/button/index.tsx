@@ -29,3 +29,11 @@ export function HomeButton(){
         </TouchableOpacity>
     )
 }
+
+export function ButtonOff({ title, ...rest }: Props){
+    return (
+        <TouchableOpacity activeOpacity={.8} style={styles.buttonOff} {...rest}>
+            <Text style={styles.title}>{title}</Text>
+        </TouchableOpacity>
+    )
+}

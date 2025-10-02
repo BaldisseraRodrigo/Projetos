@@ -1,4 +1,4 @@
-import { BackButton, Button } from '@/components/button'
+import { BackButton, Button, ButtonOff } from '@/components/button'
 import { router } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
 import Header from '../../components/header/header'
@@ -6,19 +6,23 @@ import Header from '../../components/header/header'
 export default function Kyocera() {
         
     function errors(){
-        router.navigate('./errorsK')
+        router.navigate('/kyocera/errorsK')
+    }
+
+    function changePart(){
+        router.navigate('/kyocera/changePart')
     }
 
     return (
         <View>
             <View>
-                <Header/>
+                <Header subtitle='Kyocera ECOSYS M2040idn'/>
             </View>
             <View style={styles.container}>
                 <Button title='Erros' onPress={errors}/>
-                <Button title='Obstrução'/>
-                <Button title='Inatividade'/>
-                <Button title='Manchas'/>
+                <Button title='Troca de Peça' onPress={changePart}/>
+                <ButtonOff title='Inatividade'/>
+                <ButtonOff title='Manchas'/>
                 <BackButton/>
             </View>
         </View>

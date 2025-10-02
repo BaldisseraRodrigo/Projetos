@@ -1,4 +1,4 @@
-import { Button } from '@/components/button'
+import { BackButton, Button, ButtonOff } from '@/components/button'
 import { router } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
 import Header from '../components/header/header'
@@ -7,14 +7,14 @@ export default function Tables() {
     return (
         <View>
             <View>
-                <Header/>
+                <Header subtitle='Tabelas'/>
             </View>
             <View style={styles.container}>
-                <Button title='Home' onPress={()=>router.back()}/>
                 <Button title='Firmwares' onPress={()=>router.push('/firmwares')}/>
                 <Button title='Toners'/>
-                <Button title='Peças'/>
-                <Button title='Equipamentos'/>
+                <ButtonOff title='Peças'/>
+                <ButtonOff title='Equipamentos'/>
+                <BackButton/>
             </View>
         </View>
     )

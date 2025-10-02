@@ -1,4 +1,4 @@
-import { BackButton, Button } from '@/components/button'
+import { BackButton, Button, ButtonOff } from '@/components/button'
 import Header from '@/components/header/header'
 import { router } from 'expo-router'
 import { StyleSheet, View } from 'react-native'
@@ -12,12 +12,12 @@ export default function ErrorsK() {
     return (
         <View>
             <View>
-                <Header/>
+                <Header subtitle='Kyocera/Erros'/>
             </View>
             <View style={styles.container}>
                 <Button title='E0100' onPress={e0100}/>
-                <Button title='E6000'/>
-                <Button title='E7000'/>
+                <ButtonOff title='E6000'/>
+                <ButtonOff title='E7000'/>
                 <BackButton/>
             </View>
         </View>
