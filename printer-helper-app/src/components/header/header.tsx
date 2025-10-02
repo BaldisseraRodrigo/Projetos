@@ -31,9 +31,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     header2: {
-        top: 100,
+        top: 50,
         padding: 10,
-        backgroundColor: '#ece2d2'
+        backgroundColor: '#ece2d2',
+        zIndex: 3,
     },
     title2: {
         color:'#41423a',

@@ -7,13 +7,7 @@ export default function E0100() {
     return (
         <View>
             <View>
-                <Header subtitle=''/>
-            </View>
-            <View style={styles.head}>
-                <Text style={styles.title}>Problema</Text>
-            </View>
-            <View style={styles.row}>
-                <Text style={styles.data}>Código de Erro 0100</Text>
+                <Header subtitle='Código de Erro 0100'/>
             </View>
             <View style={styles.head}>
                 <Text style={styles.title}>Causa</Text>
@@ -47,6 +41,7 @@ export const styles = StyleSheet.create({
     },
     head: {
         top: 100,
+        marginTop: 10,
         padding: 10,
         justifyContent: 'center',
         backgroundColor: '#ece2d2',

@@ -1,6 +1,6 @@
 import { BackButton } from '@/components/button'
 import Header from '@/components/header/header'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 
 export default function FuserUnit() {
 
@@ -9,7 +9,7 @@ export default function FuserUnit() {
             <View>
                 <Header subtitle='Troca da Unidade Fusora'/>
             </View>
-            <View style={styles.container2}>
+            <ScrollView style={styles.container2}>
                 <View style={styles.row}>
                     <Text style={styles.data}>I. DESLIGUE o equipamento e RETIRE o cabo de força.</Text>
                     <View style={styles.container3}>
@@ -41,7 +41,7 @@ export default function FuserUnit() {
                         <Image style={styles.image} source={require("../../../assets/images/m2040.png")} />
                     </View>
                 </View>
-            </View>
+            </ScrollView>
 
             <View style={styles.container}>
                 <BackButton/>
