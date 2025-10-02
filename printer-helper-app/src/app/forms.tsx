@@ -11,8 +11,8 @@ export default function Forms() {
             </View>
             <View style={styles.container}>
                 <Button title='Home' onPress={()=>router.back()}/>
-                <Button title='Formulário de Instalação'/>
-                <Button title='Formulário de Retirada'/>
+                <Button title='Formulário de Instalação' onPress={() => router.push('/formularioInstalacao')}/>
+                <Button title='Formulário de Retirada' onPress={() => router.push('/formularioRetirada')}/>
             </View>
         </View>
     )

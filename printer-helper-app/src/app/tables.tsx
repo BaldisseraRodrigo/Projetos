@@ -11,7 +11,7 @@ export default function Tables() {
             </View>
             <View style={styles.container}>
                 <Button title='Home' onPress={()=>router.back()}/>
-                <Button title='Firmwares'/>
+                <Button title='Firmwares' onPress={()=>router.push('/firmwares')}/>
                 <Button title='Toners'/>
                 <Button title='Peças'/>
                 <Button title='Equipamentos'/>
