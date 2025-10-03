@@ -12,7 +12,7 @@ export default function Forms() {
             <View style={styles.container}>
                 <ButtonOff title='Formulário de Preparação'/>
                 <Button title='Formulário de Instalação' onPress={() => router.push('/formularioInstalacao')}/>
-                <Button title='Formulário de Retirada' onPress={() => router.push('/formularioRetirada')}/>
+                <ButtonOff title='Formulário de Retirada'/>
                 <ButtonOff title='Formulário de Manutenção'/>
                 <ButtonOff title='Formulário de Desmanche'/>
                 <BackButton/>

@@ -1,8 +1,7 @@
+import { BackButton } from '@/components/button';
 import React from 'react';
-import { ScrollView, View, Text, TouchableOpacity, Linking } from 'react-native';
+import { Linking, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import Header from '../components/header/header';
-import { styles } from '../components/button/styles'; 
-import { BackButton, Button, ButtonOff } from '@/components/button'
 
 export default function Firmwares() {
   const firmwares = [
@@ -44,7 +43,7 @@ export default function Firmwares() {
           </Text>
 
 
-          <View style={{ flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: '#000', paddingBottom: 1}}>
+          <View style={{ flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: '#000'}}>
             <Text style={{ flex: 1, fontWeight: 'bold', textAlign: 'center' }}>MODELO</Text>
             <Text style={{ flex: 1, fontWeight: 'bold', textAlign: 'center' }}>VERSÃO</Text>
             <Text style={{ flex: 1, fontWeight: 'bold', textAlign: 'center' }}>DATA</Text>
