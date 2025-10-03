@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, View, Text, TouchableOpacity, Linking } from 'react-native';
 import Header from '../components/header/header';
 import { styles } from '../components/button/styles'; 
+import { BackButton, Button, ButtonOff } from '@/components/button'
 
 export default function Firmwares() {
   const firmwares = [
@@ -33,17 +34,17 @@ export default function Firmwares() {
   ];
 
   return (
-    <ScrollView contentContainerStyle={{ padding: 20, backgroundColor: '#fff' }}>
-      <Text style={{ ...styles.title, color: '#000', marginBottom: 20 }}>TABELAS DE FIRMWARES</Text>
+    <ScrollView contentContainerStyle={{backgroundColor: '#fff' }}>
+      <Header subtitle="LISTAGEM DE FIRMWARES"/>
 
       {firmwares.map((categoria, index) => (
-        <View key={index} style={{ marginBottom: 25 }}>
+        <View key={index} style={{ marginTop: 70 }}>
           <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10, textAlign: 'center' }}>
             {categoria.categoria}
           </Text>
 
 
-          <View style={{ flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: '#000', paddingBottom: 5 }}>
+          <View style={{ flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: '#000', paddingBottom: 1}}>
             <Text style={{ flex: 1, fontWeight: 'bold', textAlign: 'center' }}>MODELO</Text>
             <Text style={{ flex: 1, fontWeight: 'bold', textAlign: 'center' }}>VERSÃO</Text>
             <Text style={{ flex: 1, fontWeight: 'bold', textAlign: 'center' }}>DATA</Text>
@@ -62,7 +63,10 @@ export default function Firmwares() {
           ))}
         </View>
       ))}
-
+        <View style={{alignItems: 'center'}}>
+          <BackButton/>
+        </View>
     </ScrollView>
+
   );
 }
