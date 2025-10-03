@@ -1,9 +1,7 @@
+import { BackButton } from '@/components/button';
 import React, { useState } from 'react';
-import { View, Text, TextInput, Switch, TouchableOpacity, ScrollView } from 'react-native';
-import { styles } from '../components/button/styles'; 
-import { router } from 'expo-router';
+import { ScrollView, Switch, Text, TextInput, View } from 'react-native';
 import Header from '../components/header/header';
-import { BackButton, Button, ButtonOff } from '@/components/button'
 
 export default function FormularioInstalacao() {
   const [infraChecked, setInfraChecked] = useState(false);
@@ -58,13 +56,7 @@ export default function FormularioInstalacao() {
             onValueChange={setConexaoChecked}/>
           <Text style={{ marginLeft: 8 }}>Conectar cabos e ligar equipamento</Text>
         </View>
-
-        <View style={{ width: '75%', alignItems: 'center'}}>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/forms')}>
-            <Text style={styles.title}>Enviar</Text>
-          </TouchableOpacity>
           <BackButton/>
-        </View>
 
       </ScrollView>
     </View>
